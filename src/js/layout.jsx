@@ -5,6 +5,8 @@ import ScrollToTop from "./component/functional/scrollToTop.jsx";
 import { Home } from "./views/home.jsx";
 import { Demo } from "./views/demo.jsx";
 import { Single } from "./views/single.jsx";
+import { Login } from "./views/login_page.jsx";
+import { SignUp } from "./views/sign_up.jsx";
 import Store from "./store/appContext.jsx";
 
 import { Navbar } from "./component/navbar.jsx";
@@ -20,6 +22,8 @@ export class Layout extends React.Component {
 						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Home} />
+							<Route exact path="/login" component={Login} />
+							<Route exact path="/signup" component={SignUp} />
 							<Route path="/demo" component={Demo} />
 							<Route path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
