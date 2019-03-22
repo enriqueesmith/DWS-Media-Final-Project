@@ -5,8 +5,8 @@ export class Footer extends Component {
 		return (
 			<footer className="footer mt-auto py-3 text-center">
 				<p>
-					Made with <i className="fa fa-heart text-danger" /> by{" "}
-					<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
+					Copyright <i className="far fa-copyright" /> 2018 DWS Media,
+					LLC. All rights reserved.
 				</p>
 			</footer>
 		);
