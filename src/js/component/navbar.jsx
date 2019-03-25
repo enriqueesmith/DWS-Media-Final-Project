@@ -6,78 +6,72 @@ export class Navbar extends React.Component {
 	render() {
 		return (
 			<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-				<div className="leftHeader">
-					<a className="navbar-brand" href="#">
-						<i className="fas fa-book-open mr-2" />
-						DWS Media
-					</a>
-				</div>
+				<a className="navbar-brand" href="#">
+					<i className="fas fa-book-open mr-2" />
+					DWS Media
+				</a>
 				<button
 					className="navbar-toggler"
 					type="button"
 					data-toggle="collapse"
-					data-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
+					data-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
 					aria-expanded="false"
 					aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon" />
 				</button>
 				<div
 					className="collapse navbar-collapse"
-					id="navbarSupportedContent">
-					<ul className="navbar-nav mr-auto">
-						<div className="centerHeader">
-							<li className="nav-item active">
-								<Link className="nav-link" to="/">
-									Home
+					id="navbarNavDropdown">
+					<ul className="navbar-nav">
+						<li className="nav-item active centerHeader">
+							<Link className="nav-link" to="/">
+								Home <span className="sr-only">(current)</span>
+							</Link>
+						</li>
+						<li className="nav-item centerHeader">
+							<Link className="nav-link" to="#">
+								About Us
+							</Link>
+						</li>
+						<li className="nav-item centerHeader">
+							<Link className="nav-link" to="#">
+								Portfolio
+							</Link>
+						</li>
+						<li className="nav-item dropdown centerHeader">
+							<a
+								className="nav-link dropdown-toggle"
+								href="#"
+								id="navbarDropdownMenuLink"
+								role="button"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false">
+								Packages and Add-Ons
+							</a>
+							<div
+								className="dropdown-menu"
+								aria-labelledby="navbarDropdownMenuLink">
+								<Link className="dropdown-item" to="#">
+									Packages
 								</Link>
-							</li>
-							<li className="nav-item">
-								<Link className="nav-link" to="#">
-									About Us
+								<Link className="dropdown-item" to="#">
+									Invidual Add-Ons
 								</Link>
-							</li>
-							<li className="nav-item">
-								<Link className="nav-link" to="#">
-									Portfolio
-								</Link>
-							</li>
-							<li className="nav-item dropdown">
-								<a
-									className="nav-link dropdown-toggle"
-									id="navbarDropdown"
-									role="button"
-									data-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false">
-									Packages and Add-Ons
-								</a>
-								<div
-									className="dropdown-menu"
-									aria-labelledby="navbarDropdown">
-									<Link className="dropdown-item" to="#">
-										Packages
-									</Link>
-									<div className="dropdown-divider" />
-									<Link className="dropdown-item" to="#">
-										Invidual Add-Ons
-									</Link>
-								</div>
-							</li>
-						</div>
-						<div className="rightHeader">
-							<li className="nav-item">
-								<Link className="nav-link" to="#">
-									<i className="fas fa-user-circle mr-3!" />{" "}
-									Login or Sign Up
-								</Link>
-							</li>
-							<li className="nav-item">
-								<Link className="nav-link" to="#">
-									<i className="fas fa-shopping-cart" />
-								</Link>
-							</li>
-						</div>
+							</div>
+						</li>
+						<li className="nav-item rightHeader">
+							<Link className="nav-link" to="#">
+								<i className="fas fa-user-circle mr-3!" /> Login
+								or Sign Up
+							</Link>
+						</li>
+						<li className="nav-item rightHeader">
+							<Link className="nav-link" to="#">
+								<i className="fas fa-shopping-cart" />
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</nav>
