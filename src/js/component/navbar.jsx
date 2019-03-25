@@ -4,18 +4,75 @@ import { Link } from "react-router-dom";
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<nav className="navbar navbar-light bg-light mb-3">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">
-						React Webapp Boilerplate
-					</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">
-							Check the Context in action
-						</button>
-					</Link>
+			<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+				<a className="navbar-brand" href="#">
+					<i className="fas fa-book-open mr-2" />
+					DWS Media
+				</a>
+				<button
+					className="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span className="navbar-toggler-icon" />
+				</button>
+
+				<div
+					className="collapse navbar-collapse"
+					id="navbarSupportedContent">
+					<ul className="navbar-nav mr-auto">
+						<li className="nav-item active">
+							<Link className="nav-link" to="/">
+								Home
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="#">
+								About Us
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="#">
+								Portfolio
+							</Link>
+						</li>
+						<li className="nav-item dropdown">
+							<a
+								className="nav-link dropdown-toggle"
+								id="navbarDropdown"
+								role="button"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false">
+								Packages and Add-Ons
+							</a>
+							<div
+								className="dropdown-menu"
+								aria-labelledby="navbarDropdown">
+								<Link className="dropdown-item" to="#">
+									Packages
+								</Link>
+								<div className="dropdown-divider" />
+								<Link className="dropdown-item" to="#">
+									Invidual Add-Ons
+								</Link>
+							</div>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="#">
+								<i className="fas fa-user-circle mr-3!" /> Login
+								or Sign Up
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="#">
+								<i className="fas fa-shopping-cart" />
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</nav>
 		);
