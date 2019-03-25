@@ -1,0 +1,13 @@
+.navbar div{
+    display: flex;
+}
+
+.centerHeader{
+    left: 65%;
+    position: relative;
+}
+
+.rightHeader{
+    left: 135%;
+    position: relative;
+}
