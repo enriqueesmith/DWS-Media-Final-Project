@@ -8,3 +8,17 @@
     font-size: 15px;
     padding: 5px;
 }
+.thankYou{
+    margin: auto;
+}
+.check-mark{
+    font-size: 100px;
+    margin: auto;
+    color: green;
+}
+.productImage{
+    border-radius: 30px;
+}
+.price{
+    font-size: 25px;
+}
