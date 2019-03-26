@@ -6,7 +6,7 @@ import "../../styles/home.css";
 export class SignUp extends React.Component {
 	render() {
 		return (
-			<div className="signUpRow row pt-5 mt-5">
+			<div className="signUpRow row pt-5 mt-5 mb-5">
 				<div className="col-10 loginForm border p-2">
 					<form>
 						<div className="text-center mt-3">
