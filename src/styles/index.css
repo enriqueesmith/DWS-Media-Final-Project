@@ -16,3 +16,12 @@
     margin: auto;
     color: green;
 }
+.productImage{
+    border-radius: 30px;
+}
+.price{
+    font-size: 25px;
+}
+.titleCheckOut{
+    margin: auto;
+}

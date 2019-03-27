@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "../../styles/footer.css";
 
 export class Footer extends Component {
 	render() {
 		return (
-			<footer className="footer mt-auto py-3 text-center">
+			<footer className="footer mt-5 text-center">
 				<p>
 					Copyright <i className="far fa-copyright" /> 2018 DWS Media,
 					LLC. All rights reserved.

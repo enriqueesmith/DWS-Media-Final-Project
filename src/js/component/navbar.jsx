@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../styles/navbar.css";
 
 export class Navbar extends React.Component {
 	render() {
@@ -13,36 +14,36 @@ export class Navbar extends React.Component {
 					className="navbar-toggler"
 					type="button"
 					data-toggle="collapse"
-					data-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
+					data-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
 					aria-expanded="false"
 					aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon" />
 				</button>
-
 				<div
 					className="collapse navbar-collapse"
-					id="navbarSupportedContent">
-					<ul className="navbar-nav mr-auto">
-						<li className="nav-item active">
+					id="navbarNavDropdown">
+					<ul className="navbar-nav">
+						<li className="nav-item active centerHeader">
 							<Link className="nav-link" to="/">
-								Home
+								Home <span className="sr-only">(current)</span>
 							</Link>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item centerHeader">
 							<Link className="nav-link" to="#">
 								About Us
 							</Link>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item centerHeader">
 							<Link className="nav-link" to="#">
 								Portfolio
 							</Link>
 						</li>
-						<li className="nav-item dropdown">
+						<li className="nav-item dropdown centerHeader">
 							<a
 								className="nav-link dropdown-toggle"
-								id="navbarDropdown"
+								href="#"
+								id="navbarDropdownMenuLink"
 								role="button"
 								data-toggle="dropdown"
 								aria-haspopup="true"
@@ -51,23 +52,22 @@ export class Navbar extends React.Component {
 							</a>
 							<div
 								className="dropdown-menu"
-								aria-labelledby="navbarDropdown">
+								aria-labelledby="navbarDropdownMenuLink">
 								<Link className="dropdown-item" to="#">
 									Packages
 								</Link>
-								<div className="dropdown-divider" />
 								<Link className="dropdown-item" to="#">
 									Invidual Add-Ons
 								</Link>
 							</div>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item rightHeader">
 							<Link className="nav-link" to="#">
 								<i className="fas fa-user-circle mr-3!" /> Login
 								or Sign Up
 							</Link>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item rightHeader">
 							<Link className="nav-link" to="#">
 								<i className="fas fa-shopping-cart" />
 							</Link>

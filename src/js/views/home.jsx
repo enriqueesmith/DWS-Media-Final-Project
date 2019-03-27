@@ -289,7 +289,7 @@ export class Home extends React.Component {
 								alt="First slide"
 							/>
 							<div className="carousel-caption d-none d-md-block">
-								<h5>Full Name</h5>
+								<h5>Different Name</h5>
 								<p>
 									Worth every penny. My company&apos;s sales
 									increased 200%
@@ -303,7 +303,7 @@ export class Home extends React.Component {
 								alt="Second slide"
 							/>
 							<div className="carousel-caption d-none d-md-block">
-								<h5>Full Name</h5>
+								<h5>Another name</h5>
 								<p>
 									Worth every penny. My company&apos;s sales
 									increased 200%
