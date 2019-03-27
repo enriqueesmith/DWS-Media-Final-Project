@@ -9,16 +9,21 @@ import { Login } from "./views/login_page.jsx";
 import { SignUp } from "./views/sign_up.jsx";
 import { ThankYou } from "./views/thank_you.jsx";
 import { ShoppingCart } from "./views/shopping_cart.jsx";
+import { Checkout } from "./views/checkout.jsx";
 import Store from "./store/appContext.jsx";
 
 import { Navbar } from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
 
+import { Portfolio } from "./views/portfolio.jsx";
+import { AboutUs } from "./views/about-us.jsx";
+import { Profile } from "./views/profile.jsx";
+
 //create your first component
 export class Layout extends React.Component {
 	render() {
 		return (
-			<div className="d-flex flex-column h-100">
+			<div className="d-flex flex-column">
 				<BrowserRouter>
 					<ScrollToTop>
 						<Navbar />
@@ -35,12 +40,20 @@ export class Layout extends React.Component {
 								path="/shopping_cart"
 								component={ShoppingCart}
 							/>
+							<Route
+								exact
+								path="/checkout"
+								component={Checkout}
+							/>
 							<Route exact path="/signup" component={SignUp} />
 							<Route
 								path="/packages/:theid"
 								component={Packages}
 							/>
 							<Route path="/addons/:theid" component={Addons} />
+							<Route path="/portfolio" component={Portfolio} />
+							<Route path="/about-us" component={AboutUs} />
+							<Route path="/profile" component={Profile} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

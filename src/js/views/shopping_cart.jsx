@@ -7,8 +7,8 @@ export class ShoppingCart extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="row d-flex flex-row-reverse bd-highlight align-items-center pt-5 mt-5 border-bottom">
-					<button type="button" className="btn btn-primary">
+				<div className="row d-flex flex-row-reverse bd-highlight align-items-center pt-5 mt-5 border-bottom pr-3">
+					<button type="button" className="btn btn-primary ml-1">
 						Buy Now
 					</button>
 					<button type="button" className="btn btn-secondary">
