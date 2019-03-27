@@ -17,9 +17,10 @@ export class Home extends React.Component {
 						<br /> for your Company&apos;s Growth
 					</p>
 				</div>
+				<hr className="lineBreaks" />
 				<h1 className="text-center mt-4">Packages</h1>
-				<div className="packagesCards">
-					<div className="card-deck mt-4">
+				<div>
+					<div className="card-deck packagesCards mt-4">
 						<div className="card">
 							<img
 								className="card-img-top"

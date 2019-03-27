@@ -23,8 +23,17 @@
 }
 .lineBreaks{
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 .plusSign{
     color: blue;
+}
+
+.carousel-caption{
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.packagesCards{
+    height:600px;
 }
