@@ -13,6 +13,10 @@ import Store from "./store/appContext.jsx";
 import { Navbar } from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
 
+import { Portfolio } from "./views/portfolio.jsx";
+import { AboutUs } from "./views/about-us.jsx";
+import { Profile } from "./views/profile.jsx";
+
 //create your first component
 export class Layout extends React.Component {
 	render() {
@@ -32,6 +36,9 @@ export class Layout extends React.Component {
 							<Route exact path="/signup" component={SignUp} />
 							<Route path="/demo" component={Demo} />
 							<Route path="/single/:theid" component={Single} />
+							<Route path="/portfolio" component={Portfolio} />
+							<Route path="/about-us" component={AboutUs} />
+							<Route path="/profile" component={Profile} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />
