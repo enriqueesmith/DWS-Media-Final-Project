@@ -26,15 +26,15 @@ export class AboutUs extends React.Component {
 							releases and email blasts for our clients.
 							<br />
 							<br />
-							The internet is cluttered with content, and it's
-							easy to get lost in the noise. Our laser-focused
-							content marketing strategies reach out to your
-							target audience and reel them in.
+							The internet is cluttered with content, and
+							it&apos;s easy to get lost in the noise. Our
+							laser-focused content marketing strategies reach out
+							to your target audience and reel them in.
 							<br />
 							<br />
-							Don't take our word for it. Check out the content
-							we've created for current and previous clients, and
-							read our testimonials.
+							Don&apos;t take our word for it. Check out the
+							content we&apos;ve created for current and previous
+							clients, and read our testimonials.
 							<br />
 							<br />
 							Then, contact us to get started today!

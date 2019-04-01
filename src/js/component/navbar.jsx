@@ -6,9 +6,11 @@ export class Navbar extends React.Component {
 	render() {
 		return (
 			<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-				<a className="navbar-brand" href="#">
-					<i className="fas fa-book-open mr-2" />
-					DWS Media
+				<a className="navbar-brand">
+					<Link to="/">
+						<i className="fas fa-book-open mr-2" />
+					</Link>
+					<Link to="/">DWS Media</Link>
 				</a>
 				<button
 					className="navbar-toggler"
@@ -30,12 +32,12 @@ export class Navbar extends React.Component {
 							</Link>
 						</li>
 						<li className="nav-item centerHeader">
-							<Link className="nav-link" to="#">
+							<Link className="nav-link" to="/about-us">
 								About Us
 							</Link>
 						</li>
 						<li className="nav-item centerHeader">
-							<Link className="nav-link" to="#">
+							<Link className="nav-link" to="/portfolio">
 								Portfolio
 							</Link>
 						</li>
@@ -62,13 +64,17 @@ export class Navbar extends React.Component {
 							</div>
 						</li>
 						<li className="nav-item rightHeader">
-							<Link className="nav-link" to="#">
-								<i className="fas fa-user-circle mr-3!" /> Login
-								or Sign Up
+							<Link className="nav-link pr-0" to="/profile">
+								<i className="fas fa-user-circle" />
 							</Link>
 						</li>
 						<li className="nav-item rightHeader">
-							<Link className="nav-link" to="#">
+							<Link className="nav-link mr-1" to="/signup">
+								Login or Sign Up
+							</Link>
+						</li>
+						<li className="nav-item rightHeader">
+							<Link className="nav-link" to="/shopping_cart">
 								<i className="fas fa-shopping-cart" />
 							</Link>
 						</li>
