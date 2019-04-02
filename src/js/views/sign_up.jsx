@@ -4,11 +4,83 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export class SignUp extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			user: [
+				{
+					firstName: "",
+					lastName: "",
+					email: "",
+					password: "",
+					businessName: "",
+					businessURL: "",
+					businessURLUsername: "",
+					businessURLPassword: "",
+					phone: ""
+				}
+			]
+			// initialize your state
+		};
+	}
+
+	onSignUpFunction = e => {
+		e.preventDefault();
+
+		let email = e.target.emailSignUp.value;
+		if (email === "") {
+			e.target.emailSignUp.style.background = "red";
+		}
+
+		let password = e.target.passwordSignUp.value;
+		if (password === "") {
+			e.target.passwordSignUp.style.background = "red";
+		}
+
+		let firstName = e.target.firstName.value;
+		if (firstName === "") {
+			e.target.firstName.style.background = "red";
+		}
+
+		let lastName = e.target.lastName.value;
+		if (lastName === "") {
+			e.target.lastName.style.background = "red";
+		}
+
+		let businessName = e.target.businessName.value;
+		if (businessName === "") {
+			e.target.businessName.style.background = "red";
+		}
+
+		let businessURL = e.target.businessURL.value;
+		if (businessURL === "") {
+			e.target.businessURL.style.background = "red";
+		}
+
+		let businessURLUsername = e.target.businessURLUsername.value;
+		if (businessURLUsername === "") {
+			e.target.businessURLUsername.style.background = "red";
+		}
+
+		let businessURLPassword = e.target.businessURLPassword.value;
+		if (businessURLPassword === "") {
+			e.target.businessURLPassword.style.background = "red";
+		}
+
+		let phone = e.target.phoneSignUp.value;
+		if (phone === "") {
+			e.target.phoneSignUp.style.background = "red";
+		}
+	};
+
 	render() {
 		return (
 			<div className="signUpRow row pt-5 mt-5 mb-5">
 				<div className="col-10 loginForm border p-2">
-					<form>
+					<form
+						onSubmit={e => {
+							this.onSignUpFunction(e);
+						}}>
 						<div className="text-center mt-3">
 							<h1>Sign Up With DWS Media</h1>
 							<p className="text-muted">
@@ -17,22 +89,20 @@ export class SignUp extends React.Component {
 						</div>
 						<div className="form-row">
 							<div className="form-group col-md-6">
-								<label htmlFor="inputEmail4">First Name</label>
+								<label htmlFor="inputName">First Name</label>
 								<input
-									type="email"
+									type="text"
 									className="form-control"
-									id="inputEmail4"
+									id="firstName"
 									placeholder="First Name"
 								/>
 							</div>
 							<div className="form-group col-md-6">
-								<label htmlFor="inputPassword4">
-									Last Name
-								</label>
+								<label htmlFor="inputEmail5">Last Name</label>
 								<input
-									type="password"
+									type="text"
 									className="form-control"
-									id="inputPassword4"
+									id="lastName"
 									placeholder="Last Name"
 								/>
 							</div>
@@ -43,18 +113,18 @@ export class SignUp extends React.Component {
 								<input
 									type="text"
 									className="form-control"
-									id="inputAddress"
+									id="emailSignUp"
 									placeholder="Your Email Here"
 								/>
 							</div>
 							<div className="form-group col-6">
-								<label htmlFor="inputAddress">
+								<label htmlFor="inputPassword6">
 									Create Password
 								</label>
 								<input
-									type="text"
+									type="password"
 									className="form-control"
-									id="inputAddress"
+									id="passwordSignUp"
 									placeholder="Create Password"
 								/>
 							</div>
@@ -64,7 +134,7 @@ export class SignUp extends React.Component {
 							<input
 								type="text"
 								className="form-control"
-								id="inputAddress2"
+								id="businessName"
 								placeholder="Your Business Name Here"
 							/>
 						</div>
@@ -74,7 +144,7 @@ export class SignUp extends React.Component {
 								<input
 									type="text"
 									className="form-control"
-									id="inputCity"
+									id="businessURL"
 									placeholder="Your URL/Domain Name for your Business"
 								/>
 							</div>
@@ -85,28 +155,28 @@ export class SignUp extends React.Component {
 								<input
 									type="text"
 									className="form-control"
-									id="inputZip"
+									id="businessURLUsername"
 									placeholder="Your Username for your Website"
 								/>
 							</div>
 							<div className="form-group col-md-2">
-								<label htmlFor="inputZip">
+								<label htmlFor="inputPassword4">
 									Business URL Password
 								</label>
 								<input
-									type="text"
+									type="password"
 									className="form-control"
-									id="inputZip"
+									id="businessURLPassword"
 									placeholder="Your Password"
 								/>
 							</div>
 						</div>
 						<div className="form-group col-12">
-							<label htmlFor="inputEmail4">Phone Number</label>
+							<label htmlFor="inputPhone4">Phone Number</label>
 							<input
-								type="email"
+								type="text"
 								className="form-control"
-								id="inputEmail4"
+								id="phoneSignUp"
 								placeholder="Phone Number"
 							/>
 						</div>
