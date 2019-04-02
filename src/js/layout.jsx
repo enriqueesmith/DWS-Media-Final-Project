@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/functional/scrollToTop.jsx";
 
 import { Home } from "./views/home.jsx";
-import { Packages } from "./views/packages.jsx";
-import { Addons } from "./views/addons.jsx";
+import { Packages } from "./views/packagesDetails.jsx";
+import { Addons } from "./views/addOnsDetails.jsx";
 import { Login } from "./views/login_page.jsx";
 import { SignUp } from "./views/sign_up.jsx";
 import { ThankYou } from "./views/thank_you.jsx";

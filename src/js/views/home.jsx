@@ -1,9 +1,30 @@
 import React from "react";
-
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import AddOnsCard from "../component/addOnsCard.jsx";
+import PackagesCard from "../component/packagesCard.jsx";
 
 export class Home extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			addons: [],
+			packages: []
+		};
+	}
+
+	componentDidMount = () => {
+		fetch(
+			"http://dws-media-final-project-enriqueesmith.c9users.io:8080/addons/"
+		)
+			.then(res => res.json())
+			.then(addons => this.setState({ addons: addons.results }));
+		fetch(
+			"http://dws-media-final-project-enriqueesmith.c9users.io:8080/packages/"
+		)
+			.then(res => res.json())
+			.then(packages => this.setState({ packages: packages.results }));
+	};
+
 	render() {
 		return (
 			<div className="container-fluid">
@@ -21,244 +42,34 @@ export class Home extends React.Component {
 				<h1 className="text-center mt-4">Packages</h1>
 				<div>
 					<div className="card-deck packagesCards mt-4">
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This is a wider card with supporting text
-									below as a natural lead-in to additional
-									content. This content is a little bit
-									longer.
-								</p>
-							</div>
-							<div className="card-footer">
-								<small className="text-muted">
-									Last updated 3 mins ago
-								</small>
-							</div>
-						</div>
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This card has supporting text below as a
-									natural lead-in to additional content.
-								</p>
-							</div>
-							<div className="card-footer">
-								<small className="text-muted">
-									Last updated 3 mins ago
-								</small>
-							</div>
-						</div>
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This is a wider card with supporting text
-									below as a natural lead-in to additional
-									content. This card has even longer content
-									than the first to show that equal height
-									action.
-								</p>
-							</div>
-							<div className="card-footer">
-								<small className="text-muted">
-									Last updated 3 mins ago
-								</small>
-							</div>
-						</div>
+						{this.state.packages.map((elem, index) => {
+							return (
+								<PackagesCard
+									name={elem.name}
+									description={elem.description}
+									price={elem.price}
+									key={index}
+									camel={index}
+								/>
+							);
+						})}
 					</div>
 				</div>
 				<hr className="lineBreaks" />
 				<h1 className="text-center mt-4">Add - Ons</h1>
 				<div className="addOnsCards">
 					<div className="card-deck mt-4">
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This is a wider card with supporting text
-									below as a natural lead-in to additional
-									content. This content is a little bit
-									longer.
-								</p>
-							</div>
-							<div className="card-footer">
-								<div className="plusSign float-right">
-									<i className="fas fa-plus-circle" />
-								</div>
-							</div>
-						</div>
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This card has supporting text below as a
-									natural lead-in to additional content.
-								</p>
-							</div>
-							<div className="card-footer">
-								<div className="plusSign float-right">
-									<i className="fas fa-plus-circle" />
-								</div>
-							</div>
-						</div>
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This is a wider card with supporting text
-									below as a natural lead-in to additional
-									content. This card has even longer content
-									than the first to show that equal height
-									action.
-								</p>
-							</div>
-							<div className="card-footer">
-								<div className="plusSign float-right">
-									<i className="fas fa-plus-circle" />
-								</div>
-							</div>
-						</div>
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This is a wider card with supporting text
-									below as a natural lead-in to additional
-									content. This card has even longer content
-									than the first to show that equal height
-									action.
-								</p>
-							</div>
-							<div className="card-footer">
-								<div className="plusSign float-right">
-									<i className="fas fa-plus-circle" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="card-deck mt-4">
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This is a wider card with supporting text
-									below as a natural lead-in to additional
-									content. This content is a little bit
-									longer.
-								</p>
-							</div>
-							<div className="card-footer">
-								<div className="plusSign float-right">
-									<i className="fas fa-plus-circle" />
-								</div>
-							</div>
-						</div>
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This card has supporting text below as a
-									natural lead-in to additional content.
-								</p>
-							</div>
-							<div className="card-footer">
-								<div className="plusSign float-right">
-									<i className="fas fa-plus-circle" />
-								</div>
-							</div>
-						</div>
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This is a wider card with supporting text
-									below as a natural lead-in to additional
-									content. This card has even longer content
-									than the first to show that equal height
-									action.
-								</p>
-							</div>
-							<div className="card-footer">
-								<div className="plusSign float-right">
-									<i className="fas fa-plus-circle" />
-								</div>
-							</div>
-						</div>
-						<div className="card">
-							<img
-								className="card-img-top"
-								src="https://via.placeholder.com/291x150/"
-								alt="Card image cap"
-							/>
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This is a wider card with supporting text
-									below as a natural lead-in to additional
-									content. This card has even longer content
-									than the first to show that equal height
-									action.
-								</p>
-							</div>
-							<div className="card-footer">
-								<div className="plusSign float-right">
-									<i className="fas fa-plus-circle" />
-								</div>
-							</div>
-						</div>
+						{this.state.addons.map((elem, index) => {
+							return (
+								<AddOnsCard
+									name={elem.name}
+									description={elem.description}
+									price={elem.price}
+									key={index}
+									camel={index}
+								/>
+							);
+						})}
 					</div>
 				</div>
 				<hr className="lineBreaks" />
