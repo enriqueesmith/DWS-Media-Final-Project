@@ -4,7 +4,12 @@
 }
 
 .rightHeader{
-    left: 135%;
+    left: 130%;
     position: relative;
 }
-
+.navbar-brand{
+    color: white !important;
+}
+a{
+    color: white !important;
+}

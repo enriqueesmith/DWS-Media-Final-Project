@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
@@ -8,9 +9,11 @@ export class ShoppingCart extends React.Component {
 		return (
 			<div>
 				<div className="row d-flex flex-row-reverse bd-highlight align-items-center pt-5 mt-5 border-bottom pr-3">
-					<button type="button" className="btn btn-primary ml-1">
-						Buy Now
-					</button>
+					<Link to="/checkout">
+						<button type="button" className="btn btn-primary ml-1">
+							Buy Now
+						</button>
+					</Link>
 					<button type="button" className="btn btn-secondary">
 						Return to Shopping
 					</button>

@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/functional/scrollToTop.jsx";
 
 import { Home } from "./views/home.jsx";
-import { Demo } from "./views/demo.jsx";
-import { Single } from "./views/single.jsx";
+import { Packages } from "./views/packages.jsx";
+import { Addons } from "./views/addons.jsx";
 import { Login } from "./views/login_page.jsx";
 import { SignUp } from "./views/sign_up.jsx";
 import { ThankYou } from "./views/thank_you.jsx";
@@ -14,6 +14,10 @@ import Store from "./store/appContext.jsx";
 
 import { Navbar } from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
+
+import { Portfolio } from "./views/portfolio.jsx";
+import { AboutUs } from "./views/about-us.jsx";
+import { Profile } from "./views/profile.jsx";
 
 //create your first component
 export class Layout extends React.Component {
@@ -42,8 +46,14 @@ export class Layout extends React.Component {
 								component={Checkout}
 							/>
 							<Route exact path="/signup" component={SignUp} />
-							<Route path="/demo" component={Demo} />
-							<Route path="/single/:theid" component={Single} />
+							<Route
+								path="/packages/:theid"
+								component={Packages}
+							/>
+							<Route path="/addons/:theid" component={Addons} />
+							<Route path="/portfolio" component={Portfolio} />
+							<Route path="/about-us" component={AboutUs} />
+							<Route path="/profile" component={Profile} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />
