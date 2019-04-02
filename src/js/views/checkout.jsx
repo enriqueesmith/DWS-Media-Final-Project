@@ -4,6 +4,45 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export class Checkout extends React.Component {
+	onPaymentFunction = e => {
+		e.preventDefault();
+
+		let email = e.target.inputEmailPayment.value;
+		if (email === "") {
+			e.target.inputEmailPayment.style.background = "red";
+		}
+
+		let firstName = e.target.inputNamePayment.value;
+		if (firstName === "") {
+			e.target.inputNamePayment.style.background = "red";
+		}
+
+		let lastName = e.target.inputLastNamePayment.value;
+		if (lastName === "") {
+			e.target.inputLastNamePayment.style.background = "red";
+		}
+
+		let ccNumber = e.target.inputCC.value;
+		if (ccNumber === "") {
+			e.target.inputCC.style.background = "red";
+		}
+
+		let cvc = e.target.inputCVC.value;
+		if (cvc === "") {
+			e.target.inputCVC.style.background = "red";
+		}
+
+		let expDate = e.target.inputExpDate.value;
+		if (expDate === "") {
+			e.target.inputExpDate.style.background = "red";
+		}
+
+		let billingAddress = e.target.inputBillingAddress.value;
+		if (billingAddress === "") {
+			e.target.inputBillingAddress.style.background = "red";
+		}
+	};
+
 	render() {
 		return (
 			<div>
@@ -17,19 +56,22 @@ export class Checkout extends React.Component {
 				</div>
 				<div className="signUpRow row pt-5 mt-1 mb-5">
 					<div className="col-10 loginForm border p-2">
-						<form>
+						<form
+							onSubmit={e => {
+								this.onPaymentFunction(e);
+							}}>
 							<div className="text-center mt-3">
 								<h1>Payment Information</h1>
 							</div>
 							<div className="form-row">
 								<div className="form-group col-md-6">
-									<label htmlFor="inputEmail4">
+									<label htmlFor="inputAddress4">
 										First Name
 									</label>
 									<input
-										type="email"
+										type="text"
 										className="form-control"
-										id="inputEmail4"
+										id="inputNamePayment"
 										placeholder="First Name"
 									/>
 								</div>
@@ -38,22 +80,22 @@ export class Checkout extends React.Component {
 										Last Name
 									</label>
 									<input
-										type="password"
+										type="text"
 										className="form-control"
-										id="inputPassword4"
+										id="inputLastNamePayment"
 										placeholder="Last Name"
 									/>
 								</div>
 							</div>
 							<div className="form-row d-flex justify-content-between">
 								<div className="form-group col-12">
-									<label htmlFor="inputAddress">
+									<label htmlFor="inputEmail4">
 										Your Email
 									</label>
 									<input
-										type="text"
+										type="email"
 										className="form-control"
-										id="inputAddress"
+										id="inputEmailPayment"
 										placeholder="Your Email Here"
 									/>
 								</div>
@@ -66,7 +108,7 @@ export class Checkout extends React.Component {
 									<input
 										type="text"
 										className="form-control"
-										id="inputAddress"
+										id="inputCC"
 										placeholder="1234-5678-1234-5678"
 									/>
 								</div>
@@ -77,7 +119,7 @@ export class Checkout extends React.Component {
 									<input
 										type="text"
 										className="form-control"
-										id="inputAddress"
+										id="inputExpDate"
 										placeholder="01/2033"
 									/>
 								</div>
@@ -88,7 +130,7 @@ export class Checkout extends React.Component {
 									<input
 										type="text"
 										className="form-control"
-										id="inputAddress"
+										id="inputCVC"
 										placeholder="3 Digits on Back of Your Card"
 									/>
 								</div>
@@ -101,7 +143,7 @@ export class Checkout extends React.Component {
 									<input
 										type="text"
 										className="form-control"
-										id="inputAddress"
+										id="inputBillingAddress"
 										placeholder="123 ABC Way"
 									/>
 								</div>

@@ -4,12 +4,43 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export class Login extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			user: [
+				{
+					email: "",
+					password: ""
+				}
+			]
+			// initialize your state
+		};
+	}
+
+	onSubmitFunction = e => {
+		e.preventDefault();
+
+		let email = e.target.emailInput.value;
+		if (email === "") {
+			e.target.emailInput.style.background = "red";
+		}
+
+		let password = e.target.passwordInput.value;
+		if (password === "") {
+			e.target.passwordInput.style.background = "red";
+		}
+	};
+
 	render() {
 		return (
 			<div>
 				<div className="row mt-5" />
 				<div className="col-6 loginForm border p-2 mt-5">
-					<form>
+					<form
+						id="formLife"
+						onSubmit={e => {
+							this.onSubmitFunction(e);
+						}}>
 						<div className="text-center mt-3">
 							<h1>Welcome to DWS Media</h1>
 							<p className="text-muted">
@@ -23,7 +54,7 @@ export class Login extends React.Component {
 							<input
 								type="email"
 								className="form-control"
-								id="exampleInputEmail1"
+								id="emailInput"
 								aria-describedby="emailHelp"
 								placeholder="Enter email"
 							/>
@@ -43,7 +74,7 @@ export class Login extends React.Component {
 							<input
 								type="password"
 								className="form-control"
-								id="exampleInputPassword1"
+								id="passwordInput"
 								placeholder="Password"
 							/>
 						</div>
