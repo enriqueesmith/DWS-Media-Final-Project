@@ -4,6 +4,39 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export class ThankYou extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			user: [
+				{
+					date: ""
+				}
+			]
+			// initialize your state
+		};
+	}
+
+	getDatePlusWeek() {
+		var d = new Date();
+		var months = [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December"
+		];
+
+		let x = Number(d.getDay()) + parseInt("7", 10);
+		return months[d.getMonth()] + " " + x;
+	}
+
 	render() {
 		return (
 			<div>
@@ -15,7 +48,7 @@ export class ThankYou extends React.Component {
 						<h1>You Are All Set!</h1>
 						<p className="text-muted">
 							Your copy has been added to our queue and will be
-							posted to your website next Friday.
+							posted to your website {this.getDatePlusWeek()}.
 						</p>
 					</div>
 				</div>
