@@ -8,7 +8,7 @@ function PackagesCard(props) {
 		<div className="card">
 			<Link
 				to={"/packagesDetails/" + (props.camel + 1)}
-				style="cursor: pointer;">
+				style={{ cursor: "pointer" }}>
 				<img
 					className="card-img-top"
 					src="https://via.placeholder.com/291x150/"

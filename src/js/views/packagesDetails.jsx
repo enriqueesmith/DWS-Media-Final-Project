@@ -6,10 +6,32 @@ export class Packages extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			packagesList: []
+			packagesList: [
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				}
+			]
 		};
 	}
 
+	/*
 	componentDidMount = () => {
 		fetch(
 			"http://dws-media-final-project-enriqueesmith.c9users.io:8080/packages/" +
@@ -21,6 +43,7 @@ export class Packages extends React.Component {
 				this.setState({ packagesList: horse });
 			});
 	};
+	*/
 
 	render() {
 		return (

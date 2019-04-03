@@ -47,14 +47,21 @@ export class Layout extends React.Component {
 							/>
 							<Route exact path="/signup" component={SignUp} />
 							<Route
-								path="/packages/:theid"
+								path="/packagesDetails/:theid"
 								component={Packages}
 							/>
-							<Route path="/addons/:theid" component={Addons} />
+							<Route
+								path="/addOnsDetails/:theid"
+								component={Addons}
+							/>
 							<Route path="/portfolio" component={Portfolio} />
 							<Route path="/about-us" component={AboutUs} />
 							<Route path="/profile" component={Profile} />
-							<Route render={() => <h1>Not found!</h1>} />
+							<Route
+								render={() => (
+									<h1 className="mt-5">Not found!</h1>
+								)}
+							/>
 						</Switch>
 						<Footer />
 					</ScrollToTop>

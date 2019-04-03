@@ -6,10 +6,52 @@ export class Addons extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			addOnList: []
+			addOnList: [
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				},
+				{
+					name: "String",
+					description: "String",
+					price: "String"
+				}
+			]
 		};
 	}
 
+	/*
 	componentDidMount = () => {
 		fetch(
 			"http://dws-media-final-project-enriqueesmith.c9users.io:8080/addons/" +
@@ -21,6 +63,7 @@ export class Addons extends React.Component {
 				this.setState({ addOnList: horse });
 			});
 	};
+	*/
 
 	render() {
 		return (

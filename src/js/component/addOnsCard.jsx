@@ -9,7 +9,7 @@ function AddOnsCard(props) {
 		<div className="card">
 			<Link
 				to={"/addOnDetails/" + (props.camel + 1)}
-				style="cursor: pointer;">
+				style={{ cursor: "pointer" }}>
 				<img
 					className="card-img-top"
 					src="https://via.placeholder.com/291x150/"
