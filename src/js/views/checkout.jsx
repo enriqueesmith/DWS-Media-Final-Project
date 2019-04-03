@@ -2,6 +2,7 @@ import React from "react";
 
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import { Context } from "../store/appContext.jsx";
 
 export class Checkout extends React.Component {
 	onPaymentFunction = e => {
@@ -49,11 +50,20 @@ export class Checkout extends React.Component {
 				<div className="row pt-5 mt-5 checkout">
 					<h1 className="titleCheckOut">Almost Done!</h1>
 				</div>
-				<div className="row pt-5 mt-1 checkout">
-					<h3 className="titleCheckOut text-muted">
-						Final Price: $99.00
-					</h3>
-				</div>
+				<Context.Consumer>
+					{({ store }) => {
+						return (
+							<div className="row pt-5 mt-1 checkout">
+								<h3 className="titleCheckOut text-muted">
+									Final Price: $
+									{store.cart.reduce((total, product) => {
+										return total + product.price;
+									}, 0.0)}
+								</h3>
+							</div>
+						);
+					}}
+				</Context.Consumer>
 				<div className="signUpRow row pt-5 mt-1 mb-5">
 					<div className="col-10 loginForm border p-2">
 						<form

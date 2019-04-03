@@ -1,26 +1,27 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+			
 			packages: [
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				}
 			],
 
@@ -28,46 +29,52 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: 99.0
 				}
 			],
 
-			cart: [{}]
+			cart: [
+				{
+					image: "http://via.placeholder.com/200x200",
+					description: "Copyright Pro Package",
+					price: 99.0
+				}
+			]
 		},
 		actions: {
 			addToCart: koala => {
