@@ -1,7 +1,6 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			
 			packages: [
 				{
 					name: "String",
@@ -71,16 +70,20 @@ const getState = ({ getStore, setStore }) => {
 			cart: [
 				{
 					image: "http://via.placeholder.com/200x200",
+					name: "Copyright Pro Package",
 					description: "Copyright Pro Package",
 					price: 99.0
 				}
 			]
 		},
 		actions: {
-			addToCart: koala => {
+			addToCart: (koala, elephant, tiger) => {
 				var tempStore = getStore();
 				var newCart = {
-					name: koala
+					image: "http://via.placeholder.com/200x200",
+					name: koala,
+					description: elephant,
+					price: tiger
 				};
 				tempStore.cart.push(newCart);
 				setStore({ tempStore });
