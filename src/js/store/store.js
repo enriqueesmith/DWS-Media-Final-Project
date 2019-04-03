@@ -1,7 +1,13 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			cart: [{}]
+			cart: [
+				{
+					image: "http://via.placeholder.com/200x200",
+					description: "Copyright Pro Package",
+					price: 99.0
+				}
+			]
 		},
 		actions: {
 			addToCart: koala => {

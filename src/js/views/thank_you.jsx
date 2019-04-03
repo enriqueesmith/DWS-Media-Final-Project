@@ -47,8 +47,9 @@ export class ThankYou extends React.Component {
 						</div>
 						<h1>You Are All Set!</h1>
 						<p className="text-muted">
-							Your copy has been added to our queue and will be
-							posted to your website {this.getDatePlusWeek()}.
+							Your copy has been added to our queue and your first
+							blog will be posted to your website{" "}
+							{this.getDatePlusWeek()}.
 						</p>
 					</div>
 				</div>

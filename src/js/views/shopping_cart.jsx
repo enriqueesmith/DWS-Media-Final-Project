@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ShoppingCartRow } from "../component/shoppingCartRow.jsx";
+import { Context } from "../store/appContext.jsx";
 
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
@@ -30,26 +32,39 @@ export class ShoppingCart extends React.Component {
 						<h6>Price</h6>
 					</span>
 				</div>
-				<div className="row d-flex justify-content-between align-items-center checkOut border-bottom">
-					<span>
-						<img
-							className="productImage pl-3"
-							src="http://via.placeholder.com/200x200"
-						/>
-					</span>
-					<span className="productDescription">
-						<h3>Copyright Pro Package</h3>
-					</span>
-					<span className="price pr-3">
-						<p>$99.00</p>
-					</span>
-				</div>
-				<div className="row d-flex flex-row-reverse bd-highlight align-items-center checkOut pt-2 mt-3">
-					<span>
-						<p className="price pl-3 pr-3">$99.00</p>
-					</span>
-					<p className="subtotal pr-3 border-right">Subtotal</p>
-				</div>
+				<Context.Consumer>
+					{({ store, actions }) => {
+						return store.cart.map((elem, index) => {
+							return (
+								<ShoppingCartRow
+									key={index}
+									image={elem.image}
+									description={elem.description}
+									price={elem.price}
+								/>
+							);
+						});
+					}}
+				</Context.Consumer>
+				<Context.Consumer>
+					{({ store }) => {
+						return (
+							<div className="row d-flex flex-row-reverse bd-highlight align-items-center checkOut pt-2 mt-3">
+								<span>
+									<p className="price pl-3 pr-3">
+										$
+										{store.cart.reduce((total, product) => {
+											return total + product.price;
+										}, 0.0)}
+									</p>
+								</span>
+								<p className="subtotal pr-3 border-right">
+									Subtotal
+								</p>
+							</div>
+						);
+					}}
+				</Context.Consumer>
 			</div>
 		);
 	}
