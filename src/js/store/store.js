@@ -70,8 +70,8 @@ const getState = ({ getStore, setStore }) => {
 			cart: [
 				{
 					image: "http://via.placeholder.com/200x200",
-					name: "Copyright Pro Package",
-					description: "Copyright Pro Package",
+					name: "4-Week Package",
+					description: "One Blog Per Week",
 					price: 99.0
 				}
 			]

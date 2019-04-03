@@ -26,7 +26,10 @@ export class ShoppingCart extends React.Component {
 				<div className="row d-flex justify-content-between align-items-center border-bottom">
 					<span className="pl-5">Product</span>
 					<span className="productDescription">
-						<h6>Description</h6>
+						<h6>Name</h6>
+					</span>
+					<span className="productDescription">
+						<h6>Details</h6>
 					</span>
 					<span className="price pr-5">
 						<h6>Price</h6>
@@ -39,8 +42,9 @@ export class ShoppingCart extends React.Component {
 								<ShoppingCartRow
 									key={index}
 									image={elem.image}
-									description={elem.description}
+									name={elem.name}
 									price={elem.price}
+									description={elem.description}
 								/>
 							);
 						});

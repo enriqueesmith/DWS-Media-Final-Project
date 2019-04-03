@@ -12,7 +12,10 @@ export class ShoppingCartRow extends React.Component {
 					<img className="productImage pl-3" src={this.props.image} />
 				</span>
 				<span className="productDescription">
-					<h3>{this.props.description}</h3>
+					<h3>{this.props.name}</h3>
+				</span>
+				<span className="productDetails">
+					<h4>{this.props.description}</h4>
 				</span>
 				<span className="price pr-3">
 					<p>${this.props.price}</p>
@@ -24,5 +27,7 @@ export class ShoppingCartRow extends React.Component {
 ShoppingCartRow.propTypes = {
 	image: PropTypes.string,
 	description: PropTypes.string,
-	price: PropTypes.number
+	price: PropTypes.number,
+	details: PropTypes.string,
+	name: PropTypes.string
 };
