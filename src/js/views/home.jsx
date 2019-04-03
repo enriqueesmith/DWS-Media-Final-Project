@@ -1,4 +1,5 @@
 import React from "react";
+import { Context } from "../store/appContext.jsx";
 import "../../styles/home.css";
 import AddOnsCard from "../component/addOnsCard.jsx";
 import PackagesCard from "../component/packagesCard.jsx";
@@ -6,11 +7,10 @@ import PackagesCard from "../component/packagesCard.jsx";
 export class Home extends React.Component {
 	constructor() {
 		super();
-		this.state = {
-			addons: [],
-			packages: []
-		};
+		this.state = {};
 	}
+
+	/*
 
 	componentDidMount = () => {
 		fetch(
@@ -24,6 +24,8 @@ export class Home extends React.Component {
 			.then(res => res.json())
 			.then(packages => this.setState({ packages: packages.results }));
 	};
+	
+	*/
 
 	render() {
 		return (
@@ -39,37 +41,49 @@ export class Home extends React.Component {
 					</p>
 				</div>
 				<hr className="lineBreaks" />
-				<h1 className="text-center mt-4">Packages</h1>
+				<div id="packagesHeader">
+					<h1 className="text-center mt-4">Packages</h1>
+				</div>
 				<div>
 					<div className="card-deck packagesCards mt-4">
-						{this.state.packages.map((elem, index) => {
-							return (
-								<PackagesCard
-									name={elem.name}
-									description={elem.description}
-									price={elem.price}
-									key={index}
-									camel={index}
-								/>
-							);
-						})}
+						<Context.Consumer>
+							{({ store }) => {
+								return store.packages.map((elem, index) => {
+									return (
+										<PackagesCard
+											name={elem.name}
+											description={elem.description}
+											price={elem.price}
+											key={index}
+											camel={index}
+										/>
+									);
+								});
+							}}
+						</Context.Consumer>
 					</div>
 				</div>
 				<hr className="lineBreaks" />
-				<h1 className="text-center mt-4">Add - Ons</h1>
+				<div id="AddOnsHeader">
+					<h1 className="text-center mt-4">Add - Ons</h1>
+				</div>
 				<div className="addOnsCards">
 					<div className="card-deck mt-4">
-						{this.state.addons.map((elem, index) => {
-							return (
-								<AddOnsCard
-									name={elem.name}
-									description={elem.description}
-									price={elem.price}
-									key={index}
-									camel={index}
-								/>
-							);
-						})}
+						<Context.Consumer>
+							{({ store }) => {
+								return store.addons.map((elem, index) => {
+									return (
+										<AddOnsCard
+											name={elem.name}
+											description={elem.description}
+											price={elem.price}
+											key={index}
+											camel={index}
+										/>
+									);
+								});
+							}}
+						</Context.Consumer>
 					</div>
 				</div>
 				<hr className="lineBreaks" />
@@ -164,3 +178,17 @@ export class Home extends React.Component {
 		);
 	}
 }
+
+/*
+						{this.state.packages.map((elem, index) => {
+							return (
+								<PackagesCard
+									name={elem.name}
+									description={elem.description}
+									price={elem.price}
+									key={index}
+									camel={index}
+								/>
+							);
+						})}
+					*/

@@ -1,6 +1,73 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+			
+			packages: [
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				}
+			],
+
+			addons: [
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				},
+				{
+					name: "String",
+					description: "String",
+					price: 99.0
+				}
+			],
+
 			cart: [
 				{
 					image: "http://via.placeholder.com/200x200",

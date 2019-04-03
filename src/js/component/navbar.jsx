@@ -3,14 +3,21 @@ import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
 
 export class Navbar extends React.Component {
+	state = {
+		isOpen: false
+	};
+
+	toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
+
 	render() {
+		const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
 		return (
 			<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
 				<a className="navbar-brand">
 					<Link to="/">
 						<i className="fas fa-book-open mr-2" />
+						DWS Media
 					</Link>
-					<Link to="/">DWS Media</Link>
 				</a>
 				<button
 					className="navbar-toggler"
@@ -44,6 +51,7 @@ export class Navbar extends React.Component {
 						<li className="nav-item dropdown centerHeader">
 							<a
 								className="nav-link dropdown-toggle"
+								onClick={this.toggleOpen}
 								href="#"
 								id="navbarDropdownMenuLink"
 								role="button"
@@ -53,12 +61,16 @@ export class Navbar extends React.Component {
 								Packages and Add-Ons
 							</a>
 							<div
-								className="dropdown-menu"
+								className={menuClass}
 								aria-labelledby="navbarDropdownMenuLink">
-								<Link className="dropdown-item" to="#">
+								<Link
+									className="dropdown-item"
+									to="/#packagesHeader">
 									Packages
 								</Link>
-								<Link className="dropdown-item" to="#">
+								<Link
+									className="dropdown-item"
+									to="/#AddOnsHeader">
 									Invidual Add-Ons
 								</Link>
 							</div>
