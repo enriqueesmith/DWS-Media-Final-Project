@@ -3,67 +3,79 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			packages: [
 				{
-					name: "String",
+					id: 1,
+					name: "1 - Month",
 					description: "String",
-					price: 99.0
+					price: 2500.0
 				},
 				{
-					name: "String",
+					id: 2,
+					name: "3 - Month",
 					description: "String",
-					price: 99.0
+					price: 7000.0
 				},
 				{
-					name: "String",
+					id: 3,
+					name: "6 - Month",
 					description: "String",
-					price: 99.0
+					price: 13000.0
 				},
 				{
-					name: "String",
+					id: 4,
+					name: "1 - Year",
 					description: "String",
-					price: 99.0
+					price: 25000.0
 				}
 			],
 
 			addons: [
 				{
-					name: "String",
+					id: 1,
+					name: "1 - Blog",
 					description: "String",
-					price: 99.0
+					price: 250.0
 				},
 				{
-					name: "String",
+					id: 2,
+					name: "1 - Press Release",
 					description: "String",
-					price: 99.0
+					price: 250.0
 				},
 				{
-					name: "String",
+					id: 3,
+					name: "1 - eBlast",
 					description: "String",
-					price: 99.0
+					price: 250.0
 				},
 				{
-					name: "String",
+					id: 4,
+					name: "1 - Social Media Post",
 					description: "String",
-					price: 99.0
+					price: 250.0
 				},
 				{
-					name: "String",
+					id: 5,
+					name: "1 - Newspaper Article",
 					description: "String",
-					price: 99.0
+					price: 250.0
 				},
 				{
-					name: "String",
+					id: 6,
+					name: "1 - Direct Mailer",
 					description: "String",
-					price: 99.0
+					price: 250.0
 				},
 				{
-					name: "String",
+					id: 7,
+					name: "1 - Online Ad Content",
 					description: "String",
-					price: 99.0
+					price: 250.0
 				},
 				{
-					name: "String",
+					id: 8,
+					name: "1 - Company Tagline",
 					description: "String",
-					price: 99.0
+					price: 250.0
 				}
 			],
 

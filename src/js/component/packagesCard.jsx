@@ -17,8 +17,7 @@ function PackagesCard(props) {
 				<div className="card-body">
 					<h5 className="card-title">{props.name}</h5>
 					<p className="card-text">
-						{props.description}
-						{props.price}
+						{props.description}${props.price}
 					</p>
 				</div>
 			</Link>
@@ -31,7 +30,11 @@ function PackagesCard(props) {
 									type="button"
 									className="btn btn-light"
 									onClick={() =>
-										actions.addToCart(props.name)
+										actions.addToCart(
+											props.name,
+											props.description,
+											props.price
+										)
 									}>
 									Add to Cart{" "}
 									<i className="fas fa-plus-circle" />

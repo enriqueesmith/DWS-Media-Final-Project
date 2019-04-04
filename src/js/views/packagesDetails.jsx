@@ -3,38 +3,17 @@ import PropTypes from "prop-types";
 import { Context } from "../store/appContext.jsx";
 
 export class Packages extends React.Component {
+	/*
 	constructor() {
 		super();
 		this.state = {
-			packagesList: [
-				{
-					name: "String",
-					description: "String",
-					price: "String"
-				},
-				{
-					name: "String",
-					description: "String",
-					price: "String"
-				},
-				{
-					name: "String",
-					description: "String",
-					price: "String"
-				},
-				{
-					name: "String",
-					description: "String",
-					price: "String"
-				}
-			]
+			packagesList: []
 		};
 	}
 
-	/*
 	componentDidMount = () => {
 		fetch(
-			"http://dws-media-final-project-enriqueesmith.c9users.io:8080/packages/" +
+			"http://dws-media-final-project-enriqueesmith.c9users.io:8080/packagesDetails/" +
 				this.props.match.params.theid +
 				"?format=json"
 		)
@@ -47,42 +26,48 @@ export class Packages extends React.Component {
 
 	render() {
 		return (
-			<div className="container-fluid text-center mt-5">
-				<div className="row justify-content">
-					<div className="col-6">
-						<img src="https:///via.placeholder.com/640x480" />
-					</div>
-					<div className="col-6">
-						<h3>{this.state.packagesList.name}</h3>
-						<p>{this.state.packagesList.description}</p>
-					</div>
-				</div>
-				<div className="row justify-content-between mt-5">
-					<div className="col">
-						<p>{this.state.packagesList.price}</p>
-					</div>
-					<div className="col">
-						<Context.Consumer>
-							{({ actions }) => {
-								return (
+			<Context.Consumer>
+				{({ store, actions }) => {
+					var packs = store.packages.find(item => {
+						return item.id == this.props.match.params.theid;
+					});
+					return (
+						<div className="container-fluid text-center mt-5">
+							<div className="row justify-content">
+								<div className="col-6">
+									<img src="https:///via.placeholder.com/640x480" />
+								</div>
+								<div className="col-6">
+									<h3>{packs.name}</h3>
+									<p>{packs.description}</p>
+								</div>
+							</div>
+							<div className="row justify-content-between mt-5">
+								<div className="col">
+									<p>${packs.price}</p>
+								</div>
+								<div className="col">
 									<button
 										className="btn btn-primary"
 										onClick={() =>
-											actions.addToCart(this.props.name)
+											actions.addToCart(
+												packs.name,
+												packs.description,
+												packs.price
+											)
 										}>
 										Add to Cart
 									</button>
-								);
-							}}
-						</Context.Consumer>
-					</div>
-				</div>
-			</div>
+								</div>
+							</div>
+						</div>
+					);
+				}}
+			</Context.Consumer>
 		);
 	}
 }
 
 Packages.propTypes = {
-	match: PropTypes.object,
-	name: PropTypes.string
+	match: PropTypes.object
 };
