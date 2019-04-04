@@ -99,8 +99,7 @@ const getState = ({ getStore, setStore }) => {
 					price: 13000.0,
 					image: "http://via.placeholder.com/200x200"
 				}
-			],
-
+			]
 		},
 		actions: {
 			addToCart: koala => {
