@@ -10,42 +10,42 @@ export class Addons extends React.Component {
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: "number"
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: "number"
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: "number"
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: "number"
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: "number"
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: "number"
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: "number"
 				},
 				{
 					name: "String",
 					description: "String",
-					price: "String"
+					price: "number"
 				}
 			]
 		};

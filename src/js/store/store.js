@@ -71,16 +71,19 @@ const getState = ({ getStore, setStore }) => {
 				{
 					image: "http://via.placeholder.com/200x200",
 					name: "4-Week Package",
-					price: 99.0,
-					description: "One Blog Per Week"
+					description: "One Blog Per Week",
+					price: 99.0
 				}
 			]
 		},
 		actions: {
-			addToCart: koala => {
+			addToCart: (koala, elephant, tiger) => {
 				var tempStore = getStore();
 				var newCart = {
-					name: koala
+					image: "http://via.placeholder.com/200x200",
+					name: koala,
+					description: elephant,
+					price: tiger
 				};
 				tempStore.cart.push(newCart);
 				setStore({ tempStore });

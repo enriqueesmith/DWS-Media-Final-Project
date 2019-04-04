@@ -8,7 +8,7 @@ function AddOnsCard(props) {
 	return (
 		<div className="card">
 			<Link
-				to={"/addOnDetails/" + (props.camel + 1)}
+				to={"/addOnsDetails/" + (props.camel + 1)}
 				style={{ cursor: "pointer" }}>
 				<img
 					className="card-img-top"
@@ -32,7 +32,11 @@ function AddOnsCard(props) {
 									type="button"
 									className="btn btn-light"
 									onClick={() =>
-										actions.addToCart(props.name)
+										actions.addToCart(
+											props.name,
+											props.description,
+											props.price
+										)
 									}>
 									Add to Cart{" "}
 									<i className="fas fa-plus-circle" />
