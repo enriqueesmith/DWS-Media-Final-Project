@@ -24,7 +24,7 @@ function PackagesCard(props) {
 			<div className="card-footer">
 				<div className="plusSign float-right">
 					<Context.Consumer>
-						{({ actions }) => {
+						{({ store, actions }) => {
 							return (
 								<button
 									type="button"
