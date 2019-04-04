@@ -1,5 +1,6 @@
 .hugeTitle{
     margin-top: 5px;
+    padding: 0 !important;
 }
 .centeredTitle {
     position: absolute;
@@ -36,5 +37,12 @@
 
 .packagesCards{
     height:400px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    overflow-x: auto;
 }
+.addOnsCards{
+    overflow-x: auto;
+}
+.card-footer{
+}
+

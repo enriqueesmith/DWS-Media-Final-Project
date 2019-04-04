@@ -5,25 +5,26 @@ const getState = ({ getStore, setStore }) => {
 				{
 					id: 1,
 					name: "1 - Month",
-					description: "String",
+					description: "One Blog per Week",
+					//<br></br>One Press Release per Week<br></br>One eBlast per Week<br></br>One Social Media Post per Week<br></br>One Newspaper Article every two weeks",
 					price: 2500.0
 				},
 				{
 					id: 2,
 					name: "3 - Month",
-					description: "String",
+					description: "One Blog per Week",
 					price: 7000.0
 				},
 				{
 					id: 3,
 					name: "6 - Month",
-					description: "String",
+					description: "One Blog per Week",
 					price: 13000.0
 				},
 				{
 					id: 4,
 					name: "1 - Year",
-					description: "String",
+					description: "One Blog per Week",
 					price: 25000.0
 				}
 			],
@@ -32,49 +33,49 @@ const getState = ({ getStore, setStore }) => {
 				{
 					id: 1,
 					name: "1 - Blog",
-					description: "String",
+					description: "Blog",
 					price: 250.0
 				},
 				{
 					id: 2,
 					name: "1 - Press Release",
-					description: "String",
+					description: "Press Release",
 					price: 250.0
 				},
 				{
 					id: 3,
 					name: "1 - eBlast",
-					description: "String",
+					description: "eBlast",
 					price: 250.0
 				},
 				{
 					id: 4,
 					name: "1 - Social Media Post",
-					description: "String",
+					description: "Social Media Post",
 					price: 250.0
 				},
 				{
 					id: 5,
 					name: "1 - Newspaper Article",
-					description: "String",
+					description: "Newspaper Article",
 					price: 250.0
 				},
 				{
 					id: 6,
 					name: "1 - Direct Mailer",
-					description: "String",
+					description: "Direct Mailer",
 					price: 250.0
 				},
 				{
 					id: 7,
 					name: "1 - Online Ad Content",
-					description: "String",
+					description: "Online Ad Content",
 					price: 250.0
 				},
 				{
 					id: 8,
 					name: "1 - Company Tagline",
-					description: "String",
+					description: "Company Tagline",
 					price: 250.0
 				}
 			],
@@ -82,9 +83,9 @@ const getState = ({ getStore, setStore }) => {
 			cart: [
 				{
 					image: "http://via.placeholder.com/200x200",
-					name: "4-Week Package",
+					name: "6 - Month",
 					description: "One Blog Per Week",
-					price: 99.0
+					price: 13000.0
 				}
 			]
 		},

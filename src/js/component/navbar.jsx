@@ -12,7 +12,7 @@ export class Navbar extends React.Component {
 	render() {
 		const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
 		return (
-			<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+			<nav className="navbar fixed-top navbar-expand-lg navbarCustom navbar-dark bg-primary">
 				<a className="navbar-brand">
 					<Link to="/">
 						<i className="fas fa-book-open mr-2" />
