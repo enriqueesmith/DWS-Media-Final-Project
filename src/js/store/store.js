@@ -1,7 +1,6 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			
 			packages: [
 				{
 					name: "String",
@@ -86,8 +85,14 @@ const getState = ({ getStore, setStore }) => {
 				tempStore.cart.push(newCart);
 				setStore({ tempStore });
 			}
+			//	removeFromCart: e => {
+			//	let deleteArrayValue = getStore();
+			//let other = deleteArrayValue.cart.filter(shower => {
+			//	return shower.id !== e;
+			//	});
+			//	setStore({ cart: other });
+			//}
 		}
 	};
 };
-
 export default getState;

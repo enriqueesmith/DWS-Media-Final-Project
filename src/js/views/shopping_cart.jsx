@@ -10,7 +10,7 @@ export class ShoppingCart extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="row d-flex flex-row-reverse bd-highlight align-items-center pt-5 mt-5 border-bottom pr-3">
+				<div className="row d-flex flex-row-reverse bd-highlight align-items-center pt-5 mt-5 border-bottom pr-3 titleCheckOut pb-3">
 					<Link to="/checkout">
 						<button type="button" className="btn btn-primary ml-1">
 							Buy Now
@@ -24,7 +24,10 @@ export class ShoppingCart extends React.Component {
 					</div>
 				</div>
 				<div className="row d-flex justify-content-between align-items-center border-bottom">
-					<span className="pl-5">Product</span>
+					<span className="pl-5">
+						<i className="fas fa-trash-alt" />
+					</span>
+					<span>Product</span>
 					<span className="productDescription">
 						<h6>Name</h6>
 					</span>
@@ -45,6 +48,7 @@ export class ShoppingCart extends React.Component {
 									name={elem.name}
 									price={elem.price}
 									description={elem.description}
+									index={elem.id}
 								/>
 							);
 						});

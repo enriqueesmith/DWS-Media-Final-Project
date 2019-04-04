@@ -25,6 +25,10 @@
 .titleCheckOut{
     margin: auto;
 }
+.btnStyle{
+    background-color: white;
+    border: none;
+}
 
 body{
     margin-top: 70px;
