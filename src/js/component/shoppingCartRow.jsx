@@ -20,10 +20,7 @@ export class ShoppingCartRow extends React.Component {
 								<i className="fas fa-minus ml-4 text-danger" />
 							</button>
 							<span>
-								<img
-									className="ml-4 pl-5"
-									src={this.props.image}
-								/>
+								<img className="pl-3" src={this.props.image} />
 							</span>
 							<span className="productDescription">
 								<h3>{this.props.name}</h3>
@@ -31,7 +28,7 @@ export class ShoppingCartRow extends React.Component {
 							<span className="productDetails">
 								<h4>{this.props.description}</h4>
 							</span>
-							<span className="price pr-4">
+							<span className="price pr-3">
 								<p>${this.props.price}</p>
 							</span>
 						</div>

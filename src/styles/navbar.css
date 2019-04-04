@@ -1,10 +1,25 @@
-.centerHeader{
+.navbar-expand-xl .centerHeader{
     left: 65%;
     position: relative;
 }
-
-.rightHeader{
+.navbar-expand-xl .rightHeader{
     left: 130%;
+    position: relative;
+}
+.navbar-expand-lg .centerHeader{
+    left: 50%;
+    position: relative;
+}
+.navbar-expand-lg .rightHeader{
+    left: 100%;
+    position: relative;
+}
+.centerHeader{
+    left: 50%;
+    position: relative;
+}
+.rightHeader{
+    left: 100%;
     position: relative;
 }
 .navbar-brand{

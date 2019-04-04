@@ -23,49 +23,58 @@ import { Profile } from "./views/profile.jsx";
 export class Layout extends React.Component {
 	render() {
 		return (
-			<div className="d-flex flex-column">
-				<BrowserRouter>
-					<ScrollToTop>
-						<Navbar />
-						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route
-								exact
-								path="/thank_you"
-								component={ThankYou}
-							/>
-							<Route exact path="/login" component={Login} />
-							<Route
-								exact
-								path="/shopping_cart"
-								component={ShoppingCart}
-							/>
-							<Route
-								exact
-								path="/checkout"
-								component={Checkout}
-							/>
-							<Route exact path="/signup" component={SignUp} />
-							<Route
-								path="/packagesDetails/:theid"
-								component={Packages}
-							/>
-							<Route
-								path="/addOnsDetails/:theid"
-								component={Addons}
-							/>
-							<Route path="/portfolio" component={Portfolio} />
-							<Route path="/about-us" component={AboutUs} />
-							<Route path="/profile" component={Profile} />
-							<Route
-								render={() => (
-									<h1 className="mt-5">Not found!</h1>
-								)}
-							/>
-						</Switch>
-						<Footer />
-					</ScrollToTop>
-				</BrowserRouter>
+			<div className="container-fluid">
+				<div className="d-flex flex-column">
+					<BrowserRouter>
+						<ScrollToTop>
+							<Navbar />
+							<Switch>
+								<Route exact path="/" component={Home} />
+								<Route
+									exact
+									path="/thank_you"
+									component={ThankYou}
+								/>
+								<Route exact path="/login" component={Login} />
+								<Route
+									exact
+									path="/shopping_cart"
+									component={ShoppingCart}
+								/>
+								<Route
+									exact
+									path="/checkout"
+									component={Checkout}
+								/>
+								<Route
+									exact
+									path="/signup"
+									component={SignUp}
+								/>
+								<Route
+									path="/packagesDetails/:theid"
+									component={Packages}
+								/>
+								<Route
+									path="/addOnsDetails/:theid"
+									component={Addons}
+								/>
+								<Route
+									path="/portfolio"
+									component={Portfolio}
+								/>
+								<Route path="/about-us" component={AboutUs} />
+								<Route path="/profile" component={Profile} />
+								<Route
+									render={() => (
+										<h1 className="mt-5">Not found!</h1>
+									)}
+								/>
+							</Switch>
+							<Footer />
+						</ScrollToTop>
+					</BrowserRouter>
+				</div>
 			</div>
 		);
 	}
