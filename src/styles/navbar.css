@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @media (min-width: 1600px) {
     .navbarCustom .centerHeader{
@@ -23,6 +24,32 @@
     position: relative;
 }
 
+=======
+.navbar-expand-xl .centerHeader{
+    left: 65%;
+    position: relative;
+}
+.navbar-expand-xl .rightHeader{
+    left: 130%;
+    position: relative;
+}
+.navbar-expand-lg .centerHeader{
+    left: 50%;
+    position: relative;
+}
+.navbar-expand-lg .rightHeader{
+    left: 100%;
+    position: relative;
+}
+.centerHeader{
+    left: 50%;
+    position: relative;
+}
+.rightHeader{
+    left: 100%;
+    position: relative;
+}
+>>>>>>> e76f3d18be8dddee1eefc395e08f1833f75cbdd5
 .navbar-brand{
     color: white !important;
 }

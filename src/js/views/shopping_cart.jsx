@@ -27,11 +27,11 @@ export class ShoppingCart extends React.Component {
 					<span className="pl-5">
 						<i className="fas fa-trash-alt" />
 					</span>
-					<span>Product</span>
+					<span className="ml-3 pl-5">Product</span>
 					<span className="productDescription">
-						<h6>Name</h6>
+						<h6 className="ml-3 pl-5">Name</h6>
 					</span>
-					<span className="productDescription">
+					<span className="productDescription ml-3 pl-4">
 						<h6>Details</h6>
 					</span>
 					<span className="price pr-5">
@@ -48,7 +48,7 @@ export class ShoppingCart extends React.Component {
 									name={elem.name}
 									price={elem.price}
 									description={elem.description}
-									index={elem.id}
+									id={elem.id}
 								/>
 							);
 						});

@@ -56,6 +56,7 @@ export class Home extends React.Component {
 											price={elem.price}
 											key={index}
 											camel={index}
+											elem={elem}
 										/>
 									);
 								});

@@ -30,11 +30,7 @@ function PackagesCard(props) {
 									type="button"
 									className="btn btn-light"
 									onClick={() =>
-										actions.addToCart(
-											props.name,
-											props.description,
-											props.price
-										)
+										actions.addToCart(props.elem)
 									}>
 									Add to Cart{" "}
 									<i className="fas fa-plus-circle" />
@@ -54,5 +50,6 @@ PackagesCard.propTypes = {
 	name: PropTypes.string,
 	description: PropTypes.string,
 	price: PropTypes.number,
-	camel: PropTypes.number
+	camel: PropTypes.number,
+	elem: PropTypes.object
 };
