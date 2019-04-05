@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Context } from "../store/appContext.jsx";
 
 export class Addons extends React.Component {
-	render() {
+	render(props) {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
@@ -30,12 +30,7 @@ export class Addons extends React.Component {
 									<button
 										className="btn btn-primary"
 										onClick={() =>
-											actions.addToCart(
-												addon.name,
-												addon.description,
-												addon.price,
-												addon.image
-											)
+											actions.addToCart(addon)
 										}>
 										Add to Cart
 									</button>
@@ -50,5 +45,6 @@ export class Addons extends React.Component {
 }
 
 Addons.propTypes = {
-	match: PropTypes.object
+	match: PropTypes.object,
+	elem: PropTypes.object
 };

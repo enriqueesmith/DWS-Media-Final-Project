@@ -24,7 +24,7 @@ export class Packages extends React.Component {
 	};
 	*/
 
-	render() {
+	render(props) {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
@@ -51,12 +51,7 @@ export class Packages extends React.Component {
 									<button
 										className="btn btn-primary"
 										onClick={() =>
-											actions.addToCart(
-												packs.name,
-												packs.description,
-												packs.price,
-												packs.image
-											)
+											actions.addToCart(packs)
 										}>
 										Add to Cart
 									</button>
@@ -71,5 +66,6 @@ export class Packages extends React.Component {
 }
 
 Packages.propTypes = {
-	match: PropTypes.object
+	match: PropTypes.object,
+	elem: PropTypes.object
 };

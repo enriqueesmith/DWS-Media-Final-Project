@@ -16,13 +16,13 @@ function AddOnsCard(props) {
 					alt="Card image cap"
 				/>
 			</Link>
-			<div className="card-body">
+			<div className="card-body text-center">
 				<Link
 					to={"/addOnsDetails/" + props.elem.id}
 					style={{ cursor: "pointer" }}>
 					<h5 className="card-title">{props.name}</h5>
 					<p className="card-text">
-						{props.description} $ {props.price}
+						{props.description} <br /> $ {props.price}
 					</p>
 				</Link>
 			</div>

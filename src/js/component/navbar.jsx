@@ -65,12 +65,14 @@ export class Navbar extends React.Component {
 								aria-labelledby="navbarDropdownMenuLink">
 								<Link
 									className="dropdown-item"
-									to="/#packagesHeader">
+									href="/#PackagesBreak"
+									to="">
 									Packages
 								</Link>
 								<Link
 									className="dropdown-item"
-									to="/#AddOnsHeader">
+									href="/#AddOnsBreak"
+									to="">
 									Invidual Add-Ons
 								</Link>
 							</div>

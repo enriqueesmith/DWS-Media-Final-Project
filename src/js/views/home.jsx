@@ -3,11 +3,13 @@ import { Context } from "../store/appContext.jsx";
 import "../../styles/home.css";
 import AddOnsCard from "../component/addOnsCard.jsx";
 import PackagesCard from "../component/packagesCard.jsx";
+import CarouselHome from "../component/carousel.jsx";
+import PropTypes from "prop-types";
 
 export class Home extends React.Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {}; // Create a ref object
 	}
 
 	/*
@@ -40,8 +42,14 @@ export class Home extends React.Component {
 						<br /> for your Company&apos;s Growth
 					</p>
 				</div>
+				<div id="PackagesBreak">
+					<br />
+				</div>
+				<div>
+					<br />
+				</div>
 				<hr className="lineBreaks" />
-				<div id="packagesHeader">
+				<div>
 					<h1 className="text-center mt-4">Packages</h1>
 				</div>
 				<div className="card-deck packagesCards mt-4">
@@ -63,8 +71,14 @@ export class Home extends React.Component {
 						}}
 					</Context.Consumer>
 				</div>
+				<div id="AddOnsBreak">
+					<br />
+				</div>
+				<div>
+					<br />
+				</div>
 				<hr className="lineBreaks" />
-				<div id="AddOnsHeader">
+				<div>
 					<h1 className="text-center mt-4">Add - Ons</h1>
 				</div>
 				<div className="addOnsCards">
@@ -90,92 +104,7 @@ export class Home extends React.Component {
 				</div>
 				<hr className="lineBreaks" />
 				<div className="Testimonials" />
-				<div
-					id="carouselExampleIndicators"
-					className="carousel slide"
-					data-ride="carousel">
-					<ol className="carousel-indicators">
-						<li
-							data-target="#carouselExampleIndicators"
-							data-slide-to="0"
-							className="active"
-						/>
-						<li
-							data-target="#carouselExampleIndicators"
-							data-slide-to="1"
-						/>
-						<li
-							data-target="#carouselExampleIndicators"
-							data-slide-to="2"
-						/>
-					</ol>
-					<div className="carousel-inner">
-						<div className="carousel-item active">
-							<img
-								className="d-block w-100"
-								src="https://via.placeholder.com/1550x650"
-								alt="First slide"
-							/>
-							<div className="carousel-caption d-none d-md-block">
-								<h5>Different Name</h5>
-								<p>
-									Worth every penny. My company&apos;s sales
-									increased 200%
-								</p>
-							</div>
-						</div>
-						<div className="carousel-item">
-							<img
-								className="d-block w-100"
-								src="https://via.placeholder.com/1550x650"
-								alt="Second slide"
-							/>
-							<div className="carousel-caption d-none d-md-block">
-								<h5>Another name</h5>
-								<p>
-									Worth every penny. My company&apos;s sales
-									increased 200%
-								</p>
-							</div>
-						</div>
-						<div className="carousel-item">
-							<img
-								className="d-block w-100"
-								src="https://via.placeholder.com/1550x650"
-								alt="Third slide"
-							/>
-							<div className="carousel-caption d-none d-md-block">
-								<h5>Full Name</h5>
-								<p>
-									Worth every penny. My company&apos;s sales
-									increased 200%
-								</p>
-							</div>
-						</div>
-					</div>
-					<a
-						className="carousel-control-prev"
-						href="#carouselExampleIndicators"
-						role="button"
-						data-slide="prev">
-						<span
-							className="carousel-control-prev-icon"
-							aria-hidden="true"
-						/>
-						<span className="sr-only">Previous</span>
-					</a>
-					<a
-						className="carousel-control-next"
-						href="#carouselExampleIndicators"
-						role="button"
-						data-slide="next">
-						<span
-							className="carousel-control-next-icon"
-							aria-hidden="true"
-						/>
-						<span className="sr-only">Next</span>
-					</a>
-				</div>
+				<CarouselHome />
 			</div>
 		);
 	}

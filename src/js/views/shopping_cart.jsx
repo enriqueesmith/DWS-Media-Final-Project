@@ -5,11 +5,12 @@ import { Context } from "../store/appContext.jsx";
 
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import "../../styles/shoppingCart.css";
 
 export class ShoppingCart extends React.Component {
 	render() {
 		return (
-			<div className="container-fluid">
+			<div className="container-fluid shoppingCartContainer">
 				<div className="row d-flex bd-highlight align-items-center pt-5 mt-5 border-bottom pr-3 pb-3">
 					<div className="col-sm-12 col-lg-12">
 						<div className="pl-5 flex-grow-1 bd-highlight col-lg-12 col-sm-12">

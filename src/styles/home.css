@@ -12,9 +12,29 @@
     letter-spacing: -0.9px;
     width: 100%;
 }
+.centeredTitleAboutUs {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+    letter-spacing: -0.9px;
+    width: 100%;
+}
 .tagLineText{
     position: absolute;
     top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    letter-spacing: -0.9px;
+    width: 100%;
+}
+.tagLineTextAboutUs{
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
