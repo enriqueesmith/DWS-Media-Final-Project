@@ -8,13 +8,15 @@ export class Addons extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					var addon = store.addons.find(item => {
-						return item.id == this.props.match.params.theid;
+						return (
+							item.id == parseInt(this.props.match.params.theid)
+						);
 					});
 					return (
 						<div className="container-fluid text-center mt-5">
 							<div className="row justify-content">
 								<div className="col-6">
-									<img src="https:///via.placeholder.com/640x480" />
+									<img src={addon.image} />
 								</div>
 								<div className="col-6">
 									<h3>{addon.name}</h3>
@@ -31,7 +33,8 @@ export class Addons extends React.Component {
 											actions.addToCart(
 												addon.name,
 												addon.description,
-												addon.price
+												addon.price,
+												addon.image
 											)
 										}>
 										Add to Cart
