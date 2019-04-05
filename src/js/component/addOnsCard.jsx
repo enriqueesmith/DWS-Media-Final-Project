@@ -8,20 +8,24 @@ function AddOnsCard(props) {
 	return (
 		<div className="card">
 			<Link
-				to={"/addOnsDetails/" + (props.camel + 1)}
+				to={"/addOnsDetails/" + props.elem.id}
 				style={{ cursor: "pointer" }}>
 				<img
 					className="card-img-top"
-					src="https://via.placeholder.com/291x150/"
+					src={props.image}
 					alt="Card image cap"
 				/>
-				<div className="card-body">
+			</Link>
+			<div className="card-body">
+				<Link
+					to={"/addOnsDetails/" + props.elem.id}
+					style={{ cursor: "pointer" }}>
 					<h5 className="card-title">{props.name}</h5>
 					<p className="card-text">
 						{props.description} $ {props.price}
 					</p>
-				</div>
-			</Link>
+				</Link>
+			</div>
 			<div className="card-footer">
 				<div className="plusSign float-right">
 					<Context.Consumer>
@@ -31,11 +35,7 @@ function AddOnsCard(props) {
 									type="button"
 									className="btn btn-light"
 									onClick={() =>
-										actions.addToCart(
-											props.name,
-											props.description,
-											props.price
-										)
+										actions.addToCart(props.elem)
 									}>
 									Add to Cart{" "}
 									<i className="fas fa-plus-circle" />
@@ -55,5 +55,7 @@ AddOnsCard.propTypes = {
 	name: PropTypes.string,
 	description: PropTypes.string,
 	price: PropTypes.number,
-	camel: PropTypes.number
+	image: PropTypes.string,
+	camel: PropTypes.number,
+	elem: PropTypes.object
 };

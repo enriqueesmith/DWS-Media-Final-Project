@@ -7,20 +7,24 @@ function PackagesCard(props) {
 	return (
 		<div className="card">
 			<Link
-				to={"/packagesDetails/" + (props.camel + 1)}
+				to={"/packagesDetails/" + props.elem.id}
 				style={{ cursor: "pointer" }}>
 				<img
 					className="card-img-top"
-					src="https://via.placeholder.com/291x150/"
+					src={props.image}
 					alt="Card image cap"
 				/>
-				<div className="card-body">
+			</Link>
+			<div className="card-body">
+				<Link
+					to={"/packagesDetails/" + props.elem.id}
+					style={{ cursor: "pointer" }}>
 					<h5 className="card-title">{props.name}</h5>
 					<p className="card-text">
 						{props.description} $ {props.price}
 					</p>
-				</div>
-			</Link>
+				</Link>
+			</div>
 			<div className="card-footer">
 				<div className="plusSign float-right">
 					<Context.Consumer>
@@ -50,6 +54,7 @@ PackagesCard.propTypes = {
 	name: PropTypes.string,
 	description: PropTypes.string,
 	price: PropTypes.number,
+	image: PropTypes.string,
 	camel: PropTypes.number,
 	elem: PropTypes.object
 };

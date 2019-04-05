@@ -29,13 +29,15 @@ export class Packages extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					var packs = store.packages.find(item => {
-						return item.id == this.props.match.params.theid;
+						return (
+							item.id == parseInt(this.props.match.params.theid)
+						);
 					});
 					return (
 						<div className="container-fluid text-center mt-5">
 							<div className="row justify-content">
 								<div className="col-6">
-									<img src="https:///via.placeholder.com/640x480" />
+									<img src={packs.image} />
 								</div>
 								<div className="col-6">
 									<h3>{packs.name}</h3>
@@ -52,7 +54,8 @@ export class Packages extends React.Component {
 											actions.addToCart(
 												packs.name,
 												packs.description,
-												packs.price
+												packs.price,
+												packs.image
 											)
 										}>
 										Add to Cart

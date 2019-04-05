@@ -44,25 +44,24 @@ export class Home extends React.Component {
 				<div id="packagesHeader">
 					<h1 className="text-center mt-4">Packages</h1>
 				</div>
-				<div>
-					<div className="card-deck packagesCards mt-4">
-						<Context.Consumer>
-							{({ store }) => {
-								return store.packages.map((elem, index) => {
-									return (
-										<PackagesCard
-											name={elem.name}
-											description={elem.description}
-											price={elem.price}
-											key={index}
-											camel={index}
-											elem={elem}
-										/>
-									);
-								});
-							}}
-						</Context.Consumer>
-					</div>
+				<div className="card-deck packagesCards mt-4">
+					<Context.Consumer>
+						{({ store }) => {
+							return store.packages.map((elem, index) => {
+								return (
+									<PackagesCard
+										name={elem.name}
+										description={elem.description}
+										price={elem.price}
+										image={elem.image}
+										key={index}
+										camel={index}
+										elem={elem}
+									/>
+								);
+							});
+						}}
+					</Context.Consumer>
 				</div>
 				<hr className="lineBreaks" />
 				<div id="AddOnsHeader">
@@ -78,8 +77,10 @@ export class Home extends React.Component {
 											name={elem.name}
 											description={elem.description}
 											price={elem.price}
+											image={elem.image}
 											key={index}
 											camel={index}
+											elem={elem}
 										/>
 									);
 								});
