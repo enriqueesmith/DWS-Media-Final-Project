@@ -1,18 +1,14 @@
-.navbar-expand-xl .centerHeader{
-    left: 65%;
-    position: relative;
+@media (min-width: 1600px) {
+    .navbarCustom .centerHeader{
+        left: 65%;
+        position: relative;
+    }
 }
-.navbar-expand-xl .rightHeader{
-    left: 130%;
-    position: relative;
-}
-.navbar-expand-lg .centerHeader{
-    left: 50%;
-    position: relative;
-}
-.navbar-expand-lg .rightHeader{
-    left: 100%;
-    position: relative;
+@media (min-width: 1600px) {
+    .navbarCustom .rightHeader{
+        left: 130%;
+        position: relative;
+    }
 }
 .centerHeader{
     left: 50%;

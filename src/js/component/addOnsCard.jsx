@@ -25,17 +25,13 @@ function AddOnsCard(props) {
 			<div className="card-footer">
 				<div className="plusSign float-right">
 					<Context.Consumer>
-						{({ actions }) => {
+						{({ store, actions }) => {
 							return (
 								<button
 									type="button"
 									className="btn btn-light"
 									onClick={() =>
-										actions.addToCart(
-											props.name,
-											props.description,
-											props.price
-										)
+										actions.addToCart(props.elem)
 									}>
 									Add to Cart{" "}
 									<i className="fas fa-plus-circle" />
@@ -55,5 +51,7 @@ AddOnsCard.propTypes = {
 	name: PropTypes.string,
 	description: PropTypes.string,
 	price: PropTypes.number,
-	camel: PropTypes.number
+	camel: PropTypes.number,
+	elem: PropTypes.object,
+	image: PropTypes.string
 };

@@ -8,33 +8,37 @@ import { Context } from "../store/appContext.jsx";
 export class ShoppingCartRow extends React.Component {
 	render() {
 		return (
-			<Context.Consumer>
-				{({ store, actions }) => {
-					return (
-						<div className="row d-flex justify-content-between align-items-center titleCheckOut border-bottom">
-							<button
-								className="btnStyle"
-								onClick={() =>
-									actions.removeFromCart(this.props.id)
-								}>
-								<i className="fas fa-minus ml-4 text-danger" />
-							</button>
-							<span>
-								<img className="pl-3" src={this.props.image} />
-							</span>
-							<span className="productDescription">
-								<h3>{this.props.name}</h3>
-							</span>
-							<span className="productDetails">
-								<h4>{this.props.description}</h4>
-							</span>
-							<span className="price pr-3">
-								<p>${this.props.price}</p>
-							</span>
-						</div>
-					);
-				}}
-			</Context.Consumer>
+			<div className="container-fluid">
+				<Context.Consumer>
+					{({ store, actions }) => {
+						return (
+							<div className="row d-flex d-flex justify-content-between align-items-center border-bottom">
+								<button
+									className="btnStyle"
+									onClick={() =>
+										actions.removeFromCart(this.props.id)
+									}>
+									<i className="fas fa-minus text-danger" />
+								</button>
+								<span>
+									<img src={this.props.image} />
+								</span>
+								<span className="productDescription mr-5">
+									<h3>{this.props.name}</h3>
+								</span>
+								<span className="productDetails ml-5">
+									<h4 className="ml-5">
+										{this.props.description}
+									</h4>
+								</span>
+								<span className="price pr-4">
+									<p>${this.props.price}</p>
+								</span>
+							</div>
+						);
+					}}
+				</Context.Consumer>
+			</div>
 		);
 	}
 }

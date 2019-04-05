@@ -33,9 +33,9 @@ export class Login extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="container-fluid">
 				<div className="row mt-5" />
-				<div className="col-6 loginForm border p-2 mt-5">
+				<div className="col-lg-7 col-md-10 col-sm-12 loginForm border p-2 mt-5">
 					<form
 						id="formLife"
 						onSubmit={e => {
@@ -85,29 +85,27 @@ export class Login extends React.Component {
 								id="exampleCheck1"
 							/>
 						</div>
-						<div className="socialMediaLogins d-flex justify-content-between">
+						<div className="socialMediaLogins d-lg-flex justify-content-lg-between">
 							<button
 								type="submit"
-								className="btn btn-primary login col-3">
+								className="btn btn-primary login col-md-12 col-lg-3 col-sm-12 mb-1">
 								Login
 							</button>
 							<button
 								type="submit"
-								className="btn btn-primary login col-3">
+								className="btn btn-primary login col-md-12 col-lg-3 col-sm-12 mb-1">
 								<span>
 									<i className="fab fa-google-plus border-right pr-1" />
 								</span>
-								<span className="pl-1">Log in with Google</span>
+								<span className="pl-1">Use Google</span>
 							</button>
 							<button
 								type="submit"
-								className="btn btn-primary login col-3 p-1">
+								className="btn btn-primary login col-lg-3 col-md-12 col-sm-12 p-1 mb-1">
 								<span>
 									<i className="fab fa-facebook-square border-right pr-1" />
 								</span>
-								<span className="pl-1">
-									Log in with Facebook
-								</span>
+								<span className="pl-1">Use Facebook</span>
 							</button>
 						</div>
 					</form>
