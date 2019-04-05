@@ -111,7 +111,7 @@ export class Checkout extends React.Component {
 								</div>
 							</div>
 							<div className="form-row d-flex justify-content-between">
-								<div className="form-group col-4">
+								<div className="form-group col-md-2 col-lg-4">
 									<label htmlFor="inputAddress">
 										Your Credit Card Number
 									</label>
@@ -122,7 +122,7 @@ export class Checkout extends React.Component {
 										placeholder="1234-5678-1234-5678"
 									/>
 								</div>
-								<div className="form-group col-4">
+								<div className="form-group col-md-2 col-lg-4">
 									<label htmlFor="inputAddress">
 										Expiration Date
 									</label>
@@ -133,7 +133,7 @@ export class Checkout extends React.Component {
 										placeholder="01/2033"
 									/>
 								</div>
-								<div className="form-group col-4">
+								<div className="form-group col-md-2 col-lg-4">
 									<label htmlFor="inputAddress">
 										CVC Number
 									</label>
@@ -158,10 +158,10 @@ export class Checkout extends React.Component {
 									/>
 								</div>
 							</div>
-							<div className="d-flex justify-content-between">
+							<div className="d-lg-flex justify-content-between">
 								<button
 									type="submit"
-									className="btn btn-danger login col-3 p-2">
+									className="btn btn-danger login col-md-12 col-lg-3 p-2 mb-1">
 									<span>
 										<i className="far fa-window-close border-right pr-1" />
 									</span>
@@ -169,7 +169,7 @@ export class Checkout extends React.Component {
 								</button>
 								<button
 									type="submit"
-									className="btn btn-success login col-3">
+									className="btn btn-success login col-md-12 col-lg-3 mb-1">
 									<span>
 										<i className="fas fa-check-square border-right pr-1" />
 									</span>

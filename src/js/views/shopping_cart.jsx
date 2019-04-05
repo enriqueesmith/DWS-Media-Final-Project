@@ -35,7 +35,7 @@ export class ShoppingCart extends React.Component {
 					{({ store }) => {
 						if (store.cart.length === 0) {
 							return (
-								<div className="row d-flex justify-content-between align-items-center border-bottom">
+								<div className="row d-flex align-items-center border-bottom">
 									<span className="pl-5">
 										<p className="text-muted">
 											Your cart is empty!
