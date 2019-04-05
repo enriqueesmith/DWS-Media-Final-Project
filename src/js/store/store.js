@@ -115,30 +115,18 @@ const getState = ({ getStore, setStore }) => {
 				newUser.user = e;
 				console.log(newUser.user);
 				setStore({ newUser });
-				//	let firstName = e.target.firstName.value;
-				//	let lastName = e.target.lastName.value;
-				//	let email = e.target.emailSignUp.value;
-				//	let password = e.target.passwordSignUp.value;
-				//	let businessName = e.target.businessName.value;
-				//	let businessURL = e.target.businessURL.value;
-				//	let businessURLUsername = e.target.businessURLUsername.value;
-				//	let businessURLPassword = e.target.businessURLPassword.value;
-				//	let phone = e.target.phoneSignUp.value;
-				//
-				//				let tempObject = {
-				//					first_name: firstName,
-				//					last_name: lastName,
-				//					email: email,
-				//					password: password,
-				//					business_name: businessName,
-				//					business_username: businessURLUsername,
-				//					business_password: businessURLPassword,
-				//					website_url: businessURL,
-				//					phone: phone,
-				//					payment_id: true
-				//				};
+			},
+			logIn: e => {
+				let loggedInUser = getStore();
+				if (
+					loggedInUser.user.email === e.email ||
+					loggedInUser.user.password === e.password
+				) {
+					return true;
+				}
 			}
 		}
 	};
 };
+
 export default getState;
