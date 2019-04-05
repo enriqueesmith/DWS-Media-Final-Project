@@ -12,9 +12,9 @@ export class ShoppingCartRow extends React.Component {
 				<Context.Consumer>
 					{({ store, actions }) => {
 						return (
-							<div className="row d-flex d-flex justify-content-between align-items-center border-bottom">
+							<div className="row d-lg-flex justify-content-between align-items-center border-bottom">
 								<button
-									className="btnStyle"
+									className="btnStyle col-sm-12 col-lg-2"
 									onClick={() =>
 										actions.removeFromCart(this.props.id)
 									}>
@@ -23,15 +23,13 @@ export class ShoppingCartRow extends React.Component {
 								<span>
 									<img src={this.props.image} />
 								</span>
-								<span className="productDescription mr-5">
+								<span className="productDescription col-sm-12 col-lg-2">
 									<h3>{this.props.name}</h3>
 								</span>
-								<span className="productDetails ml-5">
-									<h4 className="ml-5">
-										{this.props.description}
-									</h4>
+								<span className="productDetails col-sm-12 col-lg-2">
+									<h4>{this.props.description}</h4>
 								</span>
-								<span className="price pr-4">
+								<span className="price col-sm-12 col-lg-2 pr-4">
 									<p>${this.props.price}</p>
 								</span>
 							</div>

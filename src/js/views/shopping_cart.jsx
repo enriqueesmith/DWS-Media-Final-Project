@@ -31,21 +31,25 @@ export class ShoppingCart extends React.Component {
 						</Link>
 					</div>
 				</div>
-				<div className="row d-flex justify-content-between align-items-center border-bottom">
-					<span className="pl-5">
-						<i className="fas fa-trash-alt" />
-					</span>
-					<span className="pl-5">Product</span>
-					<span className="productDescription col-lg-2">
-						<h6 className="pl-5">Name</h6>
-					</span>
-					<span className="productDescription pl-4">
-						<h6>Details</h6>
-					</span>
-					<span className="price pr-5">
-						<h6>Price</h6>
-					</span>
-				</div>
+				<Context.Consumer>
+					{({ store }) => {
+						if (store.cart.length === 0) {
+							return (
+								<div className="row d-flex justify-content-between align-items-center border-bottom">
+									<span className="pl-5">
+										<p className="text-muted">
+											Your cart is empty!
+										</p>
+									</span>
+								</div>
+							);
+						} else {
+							return (
+								<div className="row d-none justify-content-between align-items-center border-bottom" />
+							);
+						}
+					}}
+				</Context.Consumer>
 				<Context.Consumer>
 					{({ store, actions }) => {
 						return store.cart.map((elem, index) => {

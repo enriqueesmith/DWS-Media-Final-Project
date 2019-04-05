@@ -2,7 +2,7 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			user: {},
-			
+
 			packages: [
 				{
 					id: 1,
@@ -94,7 +94,7 @@ const getState = ({ getStore, setStore }) => {
 				}
 			],
 
-			cart: [{}]
+			cart: []
 		},
 		actions: {
 			addToCart: koala => {
