@@ -1,6 +1,8 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+			user: {},
+
 			packages: [
 				{
 					id: 1,
@@ -92,7 +94,8 @@ const getState = ({ getStore, setStore }) => {
 				}
 			],
 
-			cart: [{}]
+			cart: []
+			
 		},
 		actions: {
 			addToCart: koala => {
@@ -107,6 +110,34 @@ const getState = ({ getStore, setStore }) => {
 					return shower.id !== e;
 				});
 				setStore({ cart: other });
+			},
+			addUser: e => {
+				let newUser = getStore();
+				newUser.user = e;
+				console.log(newUser.user);
+				setStore({ newUser });
+				//	let firstName = e.target.firstName.value;
+				//	let lastName = e.target.lastName.value;
+				//	let email = e.target.emailSignUp.value;
+				//	let password = e.target.passwordSignUp.value;
+				//	let businessName = e.target.businessName.value;
+				//	let businessURL = e.target.businessURL.value;
+				//	let businessURLUsername = e.target.businessURLUsername.value;
+				//	let businessURLPassword = e.target.businessURLPassword.value;
+				//	let phone = e.target.phoneSignUp.value;
+				//
+				//				let tempObject = {
+				//					first_name: firstName,
+				//					last_name: lastName,
+				//					email: email,
+				//					password: password,
+				//					business_name: businessName,
+				//					business_username: businessURLUsername,
+				//					business_password: businessURLPassword,
+				//					website_url: businessURL,
+				//					phone: phone,
+				//					payment_id: true
+				//				};
 			}
 		}
 	};

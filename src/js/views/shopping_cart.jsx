@@ -9,35 +9,47 @@ import "../../styles/home.css";
 export class ShoppingCart extends React.Component {
 	render() {
 		return (
-			<div>
-				<div className="row d-flex flex-row-reverse bd-highlight align-items-center pt-5 mt-5 border-bottom pr-3 titleCheckOut pb-3">
-					<Link to="/checkout">
-						<button type="button" className="btn btn-primary ml-1">
-							Buy Now
-						</button>
-					</Link>
-					<button type="button" className="btn btn-secondary">
-						Return to Shopping
-					</button>
-					<div className="pl-5 flex-grow-1 bd-highlight">
-						<h2>Shopping Cart</h2>
+			<div className="container-fluid">
+				<div className="row d-flex bd-highlight align-items-center pt-5 mt-5 border-bottom pr-3 pb-3">
+					<div className="col-sm-12 col-lg-12">
+						<div className="pl-5 flex-grow-1 bd-highlight col-lg-12 col-sm-12">
+							<h2>Shopping Cart</h2>
+						</div>
+						<Link to="/checkout">
+							<button
+								type="button"
+								className="btn btn-primary col-lg-2 col-sm-12 mb-1">
+								Buy Now
+							</button>
+						</Link>
+						<Link to="/">
+							<button
+								type="button"
+								className="btn btn-secondary col-lg-2 col-sm-12 mb-1">
+								Return to Shopping
+							</button>
+						</Link>
 					</div>
 				</div>
-				<div className="row d-flex justify-content-between align-items-center border-bottom">
-					<span className="pl-5">
-						<i className="fas fa-trash-alt" />
-					</span>
-					<span className="ml-3 pl-5">Product</span>
-					<span className="productDescription">
-						<h6 className="ml-3 pl-5">Name</h6>
-					</span>
-					<span className="productDescription ml-3 pl-4">
-						<h6>Details</h6>
-					</span>
-					<span className="price pr-5">
-						<h6>Price</h6>
-					</span>
-				</div>
+				<Context.Consumer>
+					{({ store }) => {
+						if (store.cart.length === 0) {
+							return (
+								<div className="row d-flex align-items-center border-bottom">
+									<span className="pl-5">
+										<p className="text-muted">
+											Your cart is empty!
+										</p>
+									</span>
+								</div>
+							);
+						} else {
+							return (
+								<div className="row d-none justify-content-between align-items-center border-bottom" />
+							);
+						}
+					}}
+				</Context.Consumer>
 				<Context.Consumer>
 					{({ store, actions }) => {
 						return store.cart.map((elem, index) => {
