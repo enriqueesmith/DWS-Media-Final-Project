@@ -18,13 +18,12 @@ export class Addons extends React.Component {
 								</div>
 								<div className="col-6">
 									<h3>{addon.name}</h3>
-									<p>{addon.description}</p>
+									<p>
+										{addon.description} $ {addon.price}
+									</p>
 								</div>
 							</div>
-							<div className="row justify-content-between mt-5">
-								<div className="col">
-									<p>${addon.price}</p>
-								</div>
+							<div className="row mt-5">
 								<div className="col">
 									<button
 										className="btn btn-primary"

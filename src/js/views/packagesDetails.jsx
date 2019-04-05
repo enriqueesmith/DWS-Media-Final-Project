@@ -39,13 +39,12 @@ export class Packages extends React.Component {
 								</div>
 								<div className="col-6">
 									<h3>{packs.name}</h3>
-									<p>{packs.description}</p>
+									<p>
+										{packs.description} $ {packs.price}
+									</p>
 								</div>
 							</div>
-							<div className="row justify-content-between mt-5">
-								<div className="col">
-									<p>${packs.price}</p>
-								</div>
+							<div className="row mt-5">
 								<div className="col">
 									<button
 										className="btn btn-primary"

@@ -1,29 +1,42 @@
+
 @media (min-width: 1600px) {
     .navbarCustom .centerHeader{
         left: 65%;
         position: relative;
     }
 }
+
 @media (min-width: 1600px) {
     .navbarCustom .rightHeader{
         left: 130%;
         position: relative;
     }
 }
+
 .centerHeader{
     left: 50%;
     position: relative;
 }
+
 .rightHeader{
     left: 100%;
     position: relative;
 }
+
 .navbar-brand{
     color: white !important;
 }
-a{
+.nav-item {
     color: white !important;
 }
 .dropdown-item{
     color: rgb(0, 123, 255) !important
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
 }

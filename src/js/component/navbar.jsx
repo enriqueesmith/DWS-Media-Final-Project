@@ -14,7 +14,7 @@ export class Navbar extends React.Component {
 		return (
 			<nav className="navbar fixed-top navbar-expand-lg navbarCustom navbar-dark bg-primary">
 				<a className="navbar-brand">
-					<Link to="/">
+					<Link to="/" className="navbar-brand">
 						<i className="fas fa-book-open mr-2" />
 						DWS Media
 					</Link>

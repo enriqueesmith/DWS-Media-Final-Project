@@ -2,33 +2,34 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			user: {},
-
+			
 			packages: [
 				{
 					id: 1,
 					name: "1 - Month",
-					description: "String",
+					description: "One Blog per Week",
+					//<br></br>One Press Release per Week<br></br>One eBlast per Week<br></br>One Social Media Post per Week<br></br>One Newspaper Article every two weeks",
 					price: 2500.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 2,
 					name: "3 - Month",
-					description: "String",
+					description: "One Blog per Week",
 					price: 7000.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 3,
 					name: "6 - Month",
-					description: "String",
+					description: "One Blog per Week",
 					price: 13000.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 4,
 					name: "1 - Year",
-					description: "String",
+					description: "One Blog per Week",
 					price: 25000.0,
 					image: "http://via.placeholder.com/200x200"
 				}
@@ -38,66 +39,62 @@ const getState = ({ getStore, setStore }) => {
 				{
 					id: 5,
 					name: "1 - Blog",
-					description:
-						"Dip your toes into our content marketing service and order a superb article. Make a splash with your visitors showcasing your premium new copy.",
+					description: "Blog",
 					price: 250.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 6,
 					name: "1 - Press Release",
-					description:
-						"Blast your message to the masses! Great for new product launches, new services, or just new, well, news! Order today.",
+					description: "Press Release",
 					price: 250.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 7,
 					name: "1 - eBlast",
-					description:
-						"Keep in touch with your audience and offer new promotions to VIP’s or spark a conversation. Our Eblasts are sure to drive traffic, revenue, and increase client retention",
+					description: "eBlast",
 					price: 250.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 8,
 					name: "1 - Social Media Post",
-					description:
-						"Quit shouting into the void and post a targeted message guaranteed to captivate your audience. Increase likes, followers, and brand recognition",
+					description: "Social Media Post",
 					price: 250.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 9,
 					name: "1 - Newspaper Article",
-					description: "String",
+					description: "Newspaper Article",
 					price: 250.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 10,
 					name: "1 - Direct Mailer",
-					description: "String",
+					description: "Direct Mailer",
 					price: 250.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 11,
 					name: "1 - Online Ad Content",
-					description: "String",
+					description: "Online Ad Content",
 					price: 250.0,
 					image: "http://via.placeholder.com/200x200"
 				},
 				{
 					id: 12,
 					name: "1 - Company Tagline",
-					description: "String",
+					description: "Company Tagline",
 					price: 250.0,
 					image: "http://via.placeholder.com/200x200"
 				}
 			],
 
-			cart: []
+			cart: [{}]
 		},
 		actions: {
 			addToCart: koala => {

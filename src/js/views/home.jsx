@@ -31,7 +31,7 @@ export class Home extends React.Component {
 		return (
 			<div className="container-fluid">
 				<div className="hugeTitle text-center">
-					<img src="https://source.unsplash.com/ytNFYf4d_30/1550x740" />
+					<img src="https://source.unsplash.com/ytNFYf4d_30/1523x740" />
 					<h1 className="centeredTitle">
 						The Top Digital Marketing Team in Miami
 					</h1>
