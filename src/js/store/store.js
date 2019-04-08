@@ -95,7 +95,6 @@ const getState = ({ getStore, setStore }) => {
 			],
 
 			cart: []
-			
 		},
 		actions: {
 			addToCart: koala => {
@@ -114,7 +113,7 @@ const getState = ({ getStore, setStore }) => {
 			addUser: e => {
 				let newUser = getStore();
 				newUser.user = e;
-				console.log(newUser.user);
+				//console.log(newUser.user);
 				setStore({ newUser });
 			},
 			logIn: e => {
@@ -125,6 +124,11 @@ const getState = ({ getStore, setStore }) => {
 				) {
 					return true;
 				}
+			},
+			clearCartOnPayment: e => {
+				let currentCart = getStore();
+				currentCart.cart.splice(0, currentCart.cart.length);
+				setStore({ currentCart });
 			}
 		}
 	};
