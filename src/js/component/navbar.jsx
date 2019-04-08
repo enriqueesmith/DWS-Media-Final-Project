@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
+import { HashLink as Link } from "react-router-hash-link";
 
 export class Navbar extends React.Component {
 	state = {
@@ -64,15 +64,17 @@ export class Navbar extends React.Component {
 								className={menuClass}
 								aria-labelledby="navbarDropdownMenuLink">
 								<Link
+									smooth
 									className="dropdown-item"
-									href="/#PackagesBreak"
-									to="">
+									href=""
+									to="/#PackagesBreak">
 									Packages
 								</Link>
 								<Link
+									smooth
 									className="dropdown-item"
-									href="/#AddOnsBreak"
-									to="">
+									href=""
+									to="/#AddOnsBreak">
 									Individual Add-Ons
 								</Link>
 							</div>

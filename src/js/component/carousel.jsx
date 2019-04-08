@@ -16,19 +16,19 @@ const items = [
 		src: "http://source.unsplash.com/FMiczIq8orU/1550x650",
 		altText: "Slide 1",
 		caption: "Worth every penny. My company's sales increased 200%",
-		content: "Different Name"
+		content: "Tom Jefferson"
 	},
 	{
 		src: "http://source.unsplash.com/heEPoapeiVk/1550x650",
 		altText: "Slide 2",
 		caption: "Worth every penny. My company's sales increased 200%",
-		content: "Full Name"
+		content: "Stacy Johnson"
 	},
 	{
 		src: "http://source.unsplash.com/i0LcODk-V1Q/1550x650",
 		altText: "Slide 3",
 		caption: "Worth every penny. My company's sales increased 200%",
-		content: "Another Name"
+		content: "Ben Franklin"
 	}
 ];
 

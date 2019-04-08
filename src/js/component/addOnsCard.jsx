@@ -21,9 +21,9 @@ function AddOnsCard(props) {
 					to={"/addOnsDetails/" + props.elem.id}
 					style={{ cursor: "pointer" }}>
 					<h5 className="card-title">{props.name}</h5>
-					<p className="card-text">
-						{props.description} <br /> $ {props.price}
-					</p>
+					<p className="card-text">{props.description}</p>
+					<hr />
+					<p className="card-price">$ {props.price}</p>
 				</Link>
 			</div>
 			<div className="card-footer">

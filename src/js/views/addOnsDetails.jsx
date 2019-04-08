@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext.jsx";
+import { HashLink as Link } from "react-router-hash-link";
 
 export class Addons extends React.Component {
 	render(props) {
@@ -18,17 +19,30 @@ export class Addons extends React.Component {
 								<div className="col-6">
 									<img src={addon.image} />
 								</div>
-								<div className="col-6">
+								<div className="col-1" />
+								<div className="detailsBody col-4">
 									<h3>{addon.name}</h3>
-									<p>
-										{addon.description} $ {addon.price}
+									<p className="detailsDescription">
+										{addon.description}
+									</p>
+									<p className="details-price">
+										$ {addon.price}
 									</p>
 								</div>
 							</div>
 							<div className="row mt-5">
 								<div className="col">
+									<Link smooth href="" to="/#AddOnsBreak">
+										<button
+											type="button"
+											className="btn btn-secondary btn-block">
+											Return to Shopping
+										</button>
+									</Link>
+								</div>
+								<div className="col">
 									<button
-										className="btn btn-primary"
+										className="btn btn-primary btn-block"
 										onClick={() =>
 											actions.addToCart(addon)
 										}>

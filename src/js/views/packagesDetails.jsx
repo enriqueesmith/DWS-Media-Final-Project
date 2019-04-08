@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext.jsx";
+import { HashLink as Link } from "react-router-hash-link";
 
 export class Packages extends React.Component {
 	/*
@@ -36,20 +37,34 @@ export class Packages extends React.Component {
 					return (
 						<div className="container-fluid text-center mt-5">
 							<div className="row justify-content">
-								<div className="col-6">
+								<div className="col-6 ">
 									<img src={packs.image} />
 								</div>
-								<div className="col-6">
+								<div className="col-1" />
+								<div className="detailsBody col-4">
 									<h3>{packs.name}</h3>
-									<p>
-										{packs.description} $ {packs.price}
+									<p className="detailsDescription">
+										{packs.description}
+									</p>
+									<p className="details-price">
+										$ {packs.price}
 									</p>
 								</div>
+								<div className="col-1" />
 							</div>
 							<div className="row mt-5">
-								<div className="col">
+								<div className="col-6">
+									<Link smooth href="" to="/#PackagesBreak">
+										<button
+											type="button"
+											className="btn btn-secondary btn-block">
+											Return to Shopping
+										</button>
+									</Link>
+								</div>
+								<div className="col-6">
 									<button
-										className="btn btn-primary"
+										className="btn btn-primary btn-block"
 										onClick={() =>
 											actions.addToCart(packs)
 										}>
