@@ -73,7 +73,7 @@ export class Navbar extends React.Component {
 									className="dropdown-item"
 									href="/#AddOnsBreak"
 									to="">
-									Invidual Add-Ons
+									Individual Add-Ons
 								</Link>
 							</div>
 						</li>
