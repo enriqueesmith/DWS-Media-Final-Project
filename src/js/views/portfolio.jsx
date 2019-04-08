@@ -12,7 +12,7 @@ export class Portfolio extends React.Component {
 		};
 		return (
 			<div
-				className="container-fluid text-center bg-white mt-5"
+				className="container-fluid text-center bg-white"
 				style={styles}>
 				<h2>Our Portfolio</h2>
 				<h4>Check out some of our recent work!</h4>
@@ -20,8 +20,8 @@ export class Portfolio extends React.Component {
 					<div className="col-sm-4">
 						<div className="thumbnail">
 							<img
-								src="https://via.placeholder.com/150"
-								alt="Blog Posts"
+								src="http://source.unsplash.com/OqtafYT5kTw/300x300"
+								alt="Blog Post"
 							/>
 							<p>
 								<strong>Blog Posts</strong>
@@ -32,8 +32,8 @@ export class Portfolio extends React.Component {
 					<div className="col-sm-4">
 						<div className="thumbnail">
 							<img
-								src="https://via.placeholder.com/150"
-								alt="Press Releases"
+								src="http://source.unsplash.com/4V1dC_eoCwg/300x300"
+								alt="Press Release"
 							/>
 							<p>
 								<strong>Press Releases</strong>
@@ -47,8 +47,8 @@ export class Portfolio extends React.Component {
 					<div className="col-sm-4">
 						<div className="thumbnail">
 							<img
-								src="https://via.placeholder.com/150"
-								alt="Email Blasts"
+								src="http://source.unsplash.com/zOWvIwYGHG8/300x300"
+								alt="eBlasts"
 							/>
 							<p>
 								<strong>Email Blasts</strong>
