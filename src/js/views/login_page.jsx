@@ -1,21 +1,16 @@
 import React from "react";
 
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { Context } from "../store/appContext.jsx";
 import PropTypes from "prop-types";
+import ls from "local-storage";
 
 export class Login extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			user: [
-				{
-					email: "",
-					password: ""
-				}
-			]
-			// initialize your state
+			email: "",
+			password: ""
 		};
 	}
 
@@ -48,9 +43,7 @@ export class Login extends React.Component {
 									id="formLife"
 									onSubmit={e => {
 										if (this.onSubmitFunction(e) === true) {
-											if (
-												actions.logIn(this.state.user)
-											) {
+											if (actions.logIn(this.state)) {
 												this.props.history.push(
 													"/profile"
 												);
@@ -73,8 +66,8 @@ export class Login extends React.Component {
 											className="form-control"
 											id="emailInput"
 											aria-describedby="emailHelp"
-											placeholder="Enter email"
-											value={this.state.user.email}
+											placeholder={localStorage.email}
+											value={this.state.email}
 											onChange={e =>
 												this.setState({
 													email: e.target.value
@@ -98,8 +91,8 @@ export class Login extends React.Component {
 											type="password"
 											className="form-control"
 											id="passwordInput"
-											placeholder="Password"
-											value={this.state.user.password}
+											placeholder="Enter password"
+											value={this.state.password}
 											onChange={e =>
 												this.setState({
 													password: e.target.value
@@ -151,5 +144,6 @@ export class Login extends React.Component {
 	}
 }
 Login.propTypes = {
-	history: PropTypes.array
+	history: PropTypes.array,
+	push: PropTypes.func
 };

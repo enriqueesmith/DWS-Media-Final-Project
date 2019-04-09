@@ -2,7 +2,9 @@ import React from "react";
 
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import ls from "local-storage";
 import { Context } from "../store/appContext.jsx";
+import PropTypes from "prop-types";
 
 export class SignUp extends React.Component {
 	constructor() {
@@ -76,7 +78,7 @@ export class SignUp extends React.Component {
 	render() {
 		return (
 			<Context.Consumer>
-				{({ actions }) => {
+				{({ store, actions }) => {
 					return (
 						<div className="signUpRow row pt-5 mt-5 mb-5">
 							<div className="col-10 loginForm border p-2">
@@ -84,6 +86,44 @@ export class SignUp extends React.Component {
 									onSubmit={e => {
 										if (this.onSignUpFunction(e) === true) {
 											actions.addUser(this.state);
+											localStorage.setItem(
+												"first_name",
+												store.user.first_name
+											);
+											localStorage.setItem(
+												"last_name",
+												store.user.last_name
+											);
+											localStorage.setItem(
+												"email",
+												store.user.email
+											);
+											localStorage.setItem(
+												"password",
+												store.user.password
+											);
+											localStorage.setItem(
+												"business_name",
+												store.user.business_name
+											);
+											localStorage.setItem(
+												"website_url",
+												store.user.website_url
+											);
+											localStorage.setItem(
+												"business_username",
+												store.user.business_username
+											);
+											localStorage.setItem(
+												"business_password",
+												store.user.business_password
+											);
+											localStorage.setItem(
+												"phone",
+												store.user.phone
+											);
+											this.props.history.push("/");
+											console.log(localStorage.phone);
 										}
 									}}>
 									<div className="text-center mt-3">
@@ -298,3 +338,7 @@ export class SignUp extends React.Component {
 		);
 	}
 }
+SignUp.propTypes = {
+	history: PropTypes.array,
+	push: PropTypes.func
+};
