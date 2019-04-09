@@ -21,13 +21,13 @@ const items = [
 	{
 		src: "http://source.unsplash.com/heEPoapeiVk/1550x650",
 		altText: "Slide 2",
-		caption: "Worth every penny. My company's sales increased 200%",
+		caption: "My company's sales increased 180%. Worth every penny.",
 		content: "Stacy Johnson"
 	},
 	{
 		src: "http://source.unsplash.com/i0LcODk-V1Q/1550x650",
 		altText: "Slide 3",
-		caption: "Worth every penny. My company's sales increased 200%",
+		caption: "Worth every penny. My company's sales increased 133%",
 		content: "Ben Franklin"
 	}
 ];

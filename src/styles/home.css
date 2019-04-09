@@ -4,41 +4,41 @@
 }
 .centeredTitle {
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 60px;
+    font-size: 17.5px;
     letter-spacing: -0.9px;
     width: 100%;
 }
 .centeredTitleAboutUs {
     position: absolute;
-    top: 35%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 60px;
+    font-size: 30px;
     letter-spacing: -0.9px;
     width: 100%;
 }
 .tagLineText{
     position: absolute;
-    top: 55%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 40px;
+    font-size: 13px;
     letter-spacing: -0.9px;
     width: 100%;
 }
 .tagLineTextAboutUs{
     position: absolute;
-    top: 50%;
+    top: 26%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 40px;
+    font-size: 15px;
     letter-spacing: -0.9px;
     width: 100%;
 }
@@ -74,11 +74,12 @@
 }
 
 .detailsBody{
-    position: relative
+    position: relative;
+    margin-top: 90px;
 }
 
 .details-price{
-    position: absolute;
+    position: relative;
     bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -95,6 +96,11 @@
     -webkit-filter: blur(8px);
 }
 
+.aboutUsImage img{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
 .carousel-caption{
     top: 50%;
     background-color: rgb(0,0,0); /* Fallback color */
@@ -107,4 +113,94 @@
     width: 80%;
     padding: 20px;
     text-align: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+@media (min-width: 1200px) { 
+    .centeredTitleAboutUs{
+        font-size: 60px;
+        top: 35%;
+    }
+    .tagLineTextAboutUs {
+        font-size: 40px;
+        top: 50%;
+    }
+}
+ 
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .centeredTitleAboutUs{
+        font-size: 50px;
+        top: 20%;
+    }
+    .tagLineTextAboutUs {
+        font-size: 40px;
+        top: 30%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .centeredTitleAboutUs{
+        font-size: 40px;
+        top: 20%;
+    }
+    .tagLineTextAboutUs {
+        font-size: 30px;
+        top: 30%;
+    }
+}
+
+
+@media (min-width: 1200px) { 
+    .centeredTitle{
+        font-size: 60px;
+        top: 35%;
+    }
+    .tagLineText {
+        font-size: 40px;
+        top: 50%;
+    }
+}
+ 
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .centeredTitle{
+        font-size: 50px;
+        top: 20%;
+    }
+    .tagLineText {
+        font-size: 40px;
+        top: 30%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .centeredTitle{
+        font-size: 35px;
+        top: 20%;
+    }
+    .tagLineText {
+        font-size: 30px;
+        top: 30%;
+    }
+}
+
+@media (max-width: 330px) { 
+    .centeredTitle{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1199.98px){
+    .lineBreaks{
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1025px){
+    .card-deck {
+        flex-flow: column;
+    }
 }

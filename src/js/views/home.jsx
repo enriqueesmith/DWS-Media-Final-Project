@@ -59,7 +59,6 @@ export class Home extends React.Component {
 								return (
 									<PackagesCard
 										name={elem.name}
-										description={elem.description}
 										price={elem.price}
 										image={elem.image}
 										key={index}
@@ -89,7 +88,6 @@ export class Home extends React.Component {
 									return (
 										<AddOnsCard
 											name={elem.name}
-											description={elem.description}
 											price={elem.price}
 											image={elem.image}
 											key={index}
