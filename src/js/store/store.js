@@ -1,12 +1,15 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			user: {},
+			user: {
+				email: "",
+				password: ""
+			},
 
 			packages: [
 				{
 					id: 1,
-					name: "1 - Month",
+					name: "1 - Month Blog Package",
 					description:
 						"With our one-month blog post package, you receive a 500-word, search-engine-optimized blog post for your website every Friday for four weeks. You can specify the content if you wish, or if you prefer, we will scan your current website and evaluate industry trends to produce timely and engaging content.",
 					price: 1200.0,
@@ -14,7 +17,7 @@ const getState = ({ getStore, setStore }) => {
 				},
 				{
 					id: 2,
-					name: "3 - Month",
+					name: "3 - Month Blog Package",
 					description:
 						"The same exciting, eyeball-grabbing content as our one-month package, but you receive three full months of 500-word, search-engine-optimized blogs delivered every Friday, and at a lower per-blog price. Your website will always be fresh and up to date with informative and engaging content, and search engines will reward you for it.",
 					price: 3300.0,
@@ -22,7 +25,7 @@ const getState = ({ getStore, setStore }) => {
 				},
 				{
 					id: 3,
-					name: "6 - Month",
+					name: "6 - Month Blog Package",
 					description:
 						"Want the most eye-popping, engaging content at the lowest price? You are the perfect candidate for our six-month package. Every Friday you will receive a 500-word, search-engine-optimized blog post, ensuring your website never gets stale and your visitors have a reason to keep coming back.",
 					price: 6000.0,
@@ -116,23 +119,41 @@ const getState = ({ getStore, setStore }) => {
 			addUser: e => {
 				let newUser = getStore();
 				newUser.user = e;
-				//console.log(newUser.user);
+				console.log(newUser.user);
 				setStore({ newUser });
 			},
 			logIn: e => {
 				let loggedInUser = getStore();
+				console.log(loggedInUser.user);
 				if (
-					loggedInUser.user.email === e.email ||
+					loggedInUser.user.email === e.email &&
 					loggedInUser.user.password === e.password
 				) {
 					return true;
 				}
 			},
+			//this clears the cart on payment so the cart is empty after purchasing products.
 			clearCartOnPayment: e => {
 				let currentCart = getStore();
+				localStorage.setItem(
+					"payment_history",
+					JSON.stringify(currentCart.cart)
+				);
+				console.log(localStorage.payment_history);
 				currentCart.cart.splice(0, currentCart.cart.length);
 				setStore({ currentCart });
 			}
+			//this comes before clearing the cart so that payment history can be updated.
+			// populatePaymentHistory: e => {
+			// 	var i;
+			// 	let paymentHistoryArray = [];
+			// 	for (i = 0; i <= localStorage.payment_history; i++) {
+			// 		paymentHistoryArray.push[i];
+			// 	}
+			// 	console.log(paymentHistoryArray);
+			// 	localStorage.setItem("payment_history", paymentHistoryArray);
+			// 	return paymentHistoryArray;
+			// }
 		}
 	};
 };

@@ -3,6 +3,7 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { Context } from "../store/appContext.jsx";
+import PropTypes from "prop-types";
 
 export class Checkout extends React.Component {
 	onPaymentFunction = e => {
@@ -85,6 +86,9 @@ export class Checkout extends React.Component {
 												true
 											) {
 												actions.clearCartOnPayment();
+												this.props.history.push(
+													"/profile"
+												);
 											}
 										}}>
 										<div className="text-center mt-3">
@@ -200,3 +204,7 @@ export class Checkout extends React.Component {
 		);
 	}
 }
+Checkout.propTypes = {
+	history: PropTypes.array,
+	push: PropTypes.func
+};

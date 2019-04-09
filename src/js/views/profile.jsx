@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
+import ls from "local-storage";
+import { PaymentHistoryCard } from "../component/paymentHistory.jsx";
 
 export class Profile extends React.Component {
 	constructor() {
@@ -9,6 +11,11 @@ export class Profile extends React.Component {
 			clickedOne: "one"
 		};
 	}
+	getPaidCart = e => {
+		let x = JSON.parse(localStorage.getItem("payment_history"));
+		console.log(x);
+		return x;
+	};
 
 	render() {
 		var pageViewProfile = "";
@@ -105,7 +112,7 @@ export class Profile extends React.Component {
 								className="col-md-6 details"
 								style={detailsStyles}>
 								<blockquote>
-									<h5>Valued Customer</h5>
+									<h5>{localStorage.first_name}</h5>
 									<small>
 										<cite title="Source Title">
 											Miami, Florida{" "}
@@ -114,11 +121,11 @@ export class Profile extends React.Component {
 									</small>
 								</blockquote>
 								<p style={pDetailsStyles}>
-									User Name <br />
-									Business Name <br />
-									customer@businessname.com <br />
-									www.businessname.com <br />
-									305-123-4567 <br />
+									{localStorage.business_name} <br />
+									{localStorage.email} <br />
+									{localStorage.website_url}
+									<br />
+									{localStorage.phone} <br />
 								</p>
 							</div>
 						</div>
@@ -134,73 +141,22 @@ export class Profile extends React.Component {
 					<div className="container">
 						<div className="row justify-content-center mt-3">
 							<div className="col-sm-9 text-center">
-								<h2>My projects with DWS Media</h2>
+								<h2>Payment History</h2>
 							</div>
 						</div>
-						<div className="row text-center mt-3">
-							<div className="col-sm-4">
-								<div className="card" style={cardStyles}>
-									<img
-										className="card-img-top"
-										src="https://via.placeholder.com/75"
-										alt="Card image cap"
+						<div className="row text-center mt-3" />
+						<div>
+							{this.getPaidCart().map((elem, index) => {
+								return (
+									<PaymentHistoryCard
+										name={elem.name}
+										price={elem.price}
+										description={elem.description}
+										elem={elem}
+										key={index}
 									/>
-									<div className="card-body">
-										<h5 className="card-title">
-											Blog Post
-										</h5>
-										<p className="card-text">
-											Blog post with informative and
-											engaging content.
-										</p>
-										<a href="#" className="btn btn-primary">
-											Read more
-										</a>
-									</div>
-								</div>
-							</div>
-							<div className="col-sm-4">
-								<div className="card" style={cardStyles}>
-									<img
-										className="card-img-top"
-										src="https://via.placeholder.com/75"
-										alt="Card image cap"
-									/>
-									<div className="card-body">
-										<h5 className="card-title">
-											Company Email Blast
-										</h5>
-										<p className="card-text">
-											Email blast to 15,000 target
-											customers.
-										</p>
-										<a href="#" className="btn btn-primary">
-											Read more
-										</a>
-									</div>
-								</div>
-							</div>
-							<div className="col-sm-4">
-								<div className="card" style={cardStyles}>
-									<img
-										className="card-img-top"
-										src="https://via.placeholder.com/75"
-										alt="Card image cap"
-									/>
-									<div className="card-body">
-										<h5 className="card-title">
-											Company Press Release
-										</h5>
-										<p className="card-text">
-											Press release announcing the launch
-											of a new, exciting product.
-										</p>
-										<a href="#" className="btn btn-primary">
-											Read more
-										</a>
-									</div>
-								</div>
-							</div>
+								);
+							})}
 						</div>
 					</div>
 				</div>
