@@ -26,9 +26,6 @@ export class ShoppingCartRow extends React.Component {
 								<span className="productDescription col-sm-12 col-lg-2">
 									<h3>{this.props.name}</h3>
 								</span>
-								<span className="productDetails col-sm-12 col-lg-2">
-									<h4>{this.props.description}</h4>
-								</span>
 								<span className="price col-sm-12 col-lg-2 pr-4">
 									<p>${this.props.price}</p>
 								</span>

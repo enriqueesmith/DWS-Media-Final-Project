@@ -60,7 +60,6 @@ export class ShoppingCart extends React.Component {
 									image={elem.image}
 									name={elem.name}
 									price={elem.price}
-									description={elem.description}
 									id={elem.id}
 								/>
 							);

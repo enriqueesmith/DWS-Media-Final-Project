@@ -50,11 +50,61 @@
     color: blue;
 }
 
-.carousel-caption{
-    top: 60%;
-    transform: translateY(-50%);
-}
+
 
 .packagesCards{
     margin-bottom: 30px;
+}
+
+.card-body{
+     position: relative;
+}
+
+.card-body hr{
+    padding-bottom: 10px
+}
+
+.card-price{
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.detailsBody{
+    position: relative
+}
+
+.details-price{
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.detailsDescription{
+    margin-top: 80px;
+}
+
+.carousel img{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.carousel-caption{
+    top: 50%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.01); /* Black w/opacity/see-through */
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
 }
