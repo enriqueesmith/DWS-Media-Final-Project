@@ -10,7 +10,9 @@ export class AboutUs extends React.Component {
 		return (
 			<div className="container" style={styles}>
 				<div className="text-center text-white mb-5">
-					<img src="https://source.unsplash.com/-WW8jBak7bo/800x400" />
+					<div className="aboutUsImage">
+						<img src="https://source.unsplash.com/EG49vTtKdvI/800x400" />
+					</div>
 					<h1 className="centeredTitleAboutUs">DWS Media</h1>
 					<p className="tagLineTextAboutUs">
 						DWS Media is a leading content marketing

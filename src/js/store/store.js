@@ -13,7 +13,7 @@ const getState = ({ getStore, setStore }) => {
 					description:
 						"With our one-month blog post package, you receive a 500-word, search-engine-optimized blog post for your website every Friday for four weeks. You can specify the content if you wish, or if you prefer, we will scan your current website and evaluate industry trends to produce timely and engaging content.",
 					price: 1200.0,
-					image: "http://source.unsplash.com/wgivdx9dBdQ/640x480"
+					image: "http://source.unsplash.com/y83Je1OC6Wc/640x480"
 				},
 				{
 					id: 2,
@@ -35,7 +35,7 @@ const getState = ({ getStore, setStore }) => {
 
 			addons: [
 				{
-					id: 5,
+					id: 4,
 					name: "1 - Blog Post",
 					description:
 						"Dip your toes into our content marketing service and order a superb article. Make a splash with your visitors showcasing your premium new copy.",
@@ -43,7 +43,7 @@ const getState = ({ getStore, setStore }) => {
 					image: "http://source.unsplash.com/OqtafYT5kTw/640x480"
 				},
 				{
-					id: 6,
+					id: 5,
 					name: "1 - Press Release",
 					description:
 						"Blast your message to the masses! Great for new product launches, new services, or just new, well, news!",
@@ -51,7 +51,7 @@ const getState = ({ getStore, setStore }) => {
 					image: "http://source.unsplash.com/4V1dC_eoCwg/640x480"
 				},
 				{
-					id: 7,
+					id: 6,
 					name: "1 - eBlast",
 					description:
 						"Keep in touch with your audience and offer new promotions to VIP’s or spark a conversation. Our Eblasts are sure to drive traffic, revenue, and increase client retention.",
@@ -59,7 +59,7 @@ const getState = ({ getStore, setStore }) => {
 					image: "http://source.unsplash.com/zOWvIwYGHG8/640x480"
 				},
 				{
-					id: 8,
+					id: 7,
 					name: "1 - Social Media Post",
 					description:
 						"Quit shouting into the void and post a targeted message guaranteed to captivate your audience. Increase likes, followers, and brand recognition.",
@@ -67,7 +67,7 @@ const getState = ({ getStore, setStore }) => {
 					image: "http://source.unsplash.com/6F0mLsrv134/640x480"
 				},
 				{
-					id: 9,
+					id: 8,
 					name: "1 - Newspaper/Magazine Article",
 					description:
 						"Attract a certain kind of audience with a printed format article that is sure to spark interest and enthusiasm around your products and/or services.",
@@ -75,7 +75,7 @@ const getState = ({ getStore, setStore }) => {
 					image: "http://source.unsplash.com/wajusTqz_FI/640x480"
 				},
 				{
-					id: 10,
+					id: 9,
 					name: "1 - Direct Mailer",
 					description:
 						"Mailing potential and current customers is a great way to make sure you are using all avenues to reach your market and a proven way to increase sales.",
@@ -83,7 +83,7 @@ const getState = ({ getStore, setStore }) => {
 					image: "http://source.unsplash.com/uGcDWKN91Fs/640x480"
 				},
 				{
-					id: 11,
+					id: 10,
 					name: "1 - Online Ad Content",
 					description:
 						"We'll create the perfect online advertising content for your company that is sure to drive traffic from those specific consumers you want to target.",
@@ -91,7 +91,7 @@ const getState = ({ getStore, setStore }) => {
 					image: "http://source.unsplash.com/EpJOBZNzrVo/640x480"
 				},
 				{
-					id: 12,
+					id: 11,
 					name: "1 - Company Tagline",
 					description:
 						"Let our experts create the perfect tagline for your company that tells the world what you do in one short captivating sentence.",

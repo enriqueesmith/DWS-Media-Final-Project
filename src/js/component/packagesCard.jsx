@@ -20,7 +20,6 @@ function PackagesCard(props) {
 					to={"/packagesDetails/" + props.elem.id}
 					style={{ cursor: "pointer" }}>
 					<h5 className="card-title">{props.name}</h5>
-					<p className="card-text">{props.description}</p>
 					<hr />
 					<p className="card-price">$ {props.price}</p>
 				</Link>

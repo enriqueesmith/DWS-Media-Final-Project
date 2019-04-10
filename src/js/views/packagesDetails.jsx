@@ -37,11 +37,11 @@ export class Packages extends React.Component {
 					return (
 						<div className="container-fluid text-center mt-5">
 							<div className="row justify-content">
-								<div className="col-6 ">
+								<div className="col-lg-6 col-sm-12">
 									<img src={packs.image} />
 								</div>
-								<div className="col-1" />
-								<div className="detailsBody col-4">
+								<div className="col-lg-1 col-sm-12" />
+								<div className="detailsBody col-lg-4 col-sm-12">
 									<h3>{packs.name}</h3>
 									<p className="detailsDescription">
 										{packs.description}
@@ -53,7 +53,7 @@ export class Packages extends React.Component {
 								<div className="col-1" />
 							</div>
 							<div className="row mt-5">
-								<div className="col-6">
+								<div className="col-lg-6 col-sm-12">
 									<Link smooth href="" to="/#PackagesBreak">
 										<button
 											type="button"
@@ -62,7 +62,7 @@ export class Packages extends React.Component {
 										</button>
 									</Link>
 								</div>
-								<div className="col-6">
+								<div className="col-lg-6 col-sm-12">
 									<button
 										className="btn btn-primary btn-block"
 										onClick={() =>

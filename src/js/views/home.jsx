@@ -59,7 +59,6 @@ export class Home extends React.Component {
 								return (
 									<PackagesCard
 										name={elem.name}
-										description={elem.description}
 										price={elem.price}
 										image={elem.image}
 										key={index}
@@ -82,14 +81,13 @@ export class Home extends React.Component {
 					<h1 className="text-center mt-4">Add - Ons</h1>
 				</div>
 				<div className="addOnsCards">
-					<div className="card-deck mt-4">
+					<div className="card-deck addOnsCardsDeck mt-4">
 						<Context.Consumer>
 							{({ store }) => {
 								return store.addons.map((elem, index) => {
 									return (
 										<AddOnsCard
 											name={elem.name}
-											description={elem.description}
 											price={elem.price}
 											image={elem.image}
 											key={index}
