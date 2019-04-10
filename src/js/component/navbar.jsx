@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../../styles/navbar.css";
 import { HashLink as Link } from "react-router-hash-link";
+import ls from "local-storage";
+import { LocalFirstName } from "./localStorage_first_name.jsx";
 import { Context } from "../store/appContext.jsx";
 
 import {
@@ -97,7 +99,7 @@ export class NavbarComponent extends React.Component {
 							</NavItem>
 							<NavItem className="rightHeader">
 								<Link className="nav-link mr-1" to="/signup">
-									Login or Sign Up
+									<LocalFirstName />
 								</Link>
 							</NavItem>
 							<Context.Consumer>
