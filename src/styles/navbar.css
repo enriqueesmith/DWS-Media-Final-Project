@@ -1,26 +1,44 @@
 
-@media (min-width: 1600px) {
+@media (min-width: 1100px)  {
     .navbarCustom .centerHeader{
         left: 65%;
         position: relative;
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1100px) {
     .navbarCustom .rightHeader{
-        left: 130%;
+        left: 125%;
         position: relative;
     }
 }
 
+@media (min-width: 1000px) and (max-width:1099.98px)  {
+    .navbarCustom .centerHeader{
+        left: 25%;
+        position: relative;
+    }
+}
+
+@media (min-width: 1000px) and (max-width:1099.98px) {
+    .navbarCustom .rightHeader{
+        left: 35%;
+        position: relative;
+    }
+}
+
+
+
 .centerHeader{
-    left: 50%;
+    left: 0%;
     position: relative;
+    margin: auto;
 }
 
 .rightHeader{
-    left: 100%;
+    left: 0%;
     position: relative;
+    margin: auto;
 }
 
 .navbar-brand{
