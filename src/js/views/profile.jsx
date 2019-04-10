@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
 import ls from "local-storage";
 import { PaymentHistoryCard } from "../component/paymentHistory.jsx";
+import { PaidHistoryFunction } from "../component/paidHistoryFunction.jsx";
+import { ProfileInformation } from "../component/profileInformation.jsx";
+import { LocalFirstName } from "../component/localStorage_first_name.jsx";
 
 export class Profile extends React.Component {
 	constructor() {
@@ -112,7 +115,9 @@ export class Profile extends React.Component {
 								className="col-md-6 details"
 								style={detailsStyles}>
 								<blockquote>
-									<h5>{localStorage.first_name}</h5>
+									<h5>
+										<LocalFirstName />
+									</h5>
 									<small>
 										<cite title="Source Title">
 											Miami, Florida{" "}
@@ -121,11 +126,7 @@ export class Profile extends React.Component {
 									</small>
 								</blockquote>
 								<p style={pDetailsStyles}>
-									{localStorage.business_name} <br />
-									{localStorage.email} <br />
-									{localStorage.website_url}
-									<br />
-									{localStorage.phone} <br />
+									<ProfileInformation />
 								</p>
 							</div>
 						</div>
@@ -146,17 +147,7 @@ export class Profile extends React.Component {
 						</div>
 						<div className="row text-center mt-3" />
 						<div>
-							{this.getPaidCart().map((elem, index) => {
-								return (
-									<PaymentHistoryCard
-										name={elem.name}
-										price={elem.price}
-										description={elem.description}
-										elem={elem}
-										key={index}
-									/>
-								);
-							})}
+							<PaidHistoryFunction />
 						</div>
 					</div>
 				</div>

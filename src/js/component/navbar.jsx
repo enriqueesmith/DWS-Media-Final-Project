@@ -1,6 +1,9 @@
 import React from "react";
 import "../../styles/navbar.css";
 import { HashLink as Link } from "react-router-hash-link";
+import ls from "local-storage";
+import { LocalFirstName } from "./localStorage_first_name.jsx";
+import { Context } from "../store/appContext.jsx";
 
 export class Navbar extends React.Component {
 	state = {
@@ -86,14 +89,23 @@ export class Navbar extends React.Component {
 						</li>
 						<li className="nav-item rightHeader">
 							<Link className="nav-link mr-1" to="/signup">
-								Login or Sign Up
+								<LocalFirstName />
 							</Link>
 						</li>
-						<li className="nav-item rightHeader">
-							<Link className="nav-link" to="/shopping_cart">
-								<i className="fas fa-shopping-cart" />
-							</Link>
-						</li>
+						<Context.Consumer>
+							{({ store, actions }) => {
+								return (
+									<li className="nav-item rightHeader">
+										<Link
+											className="nav-link"
+											to="/shopping_cart">
+											{store.cart.length}
+											<i className="fas fa-shopping-cart" />
+										</Link>
+									</li>
+								);
+							}}
+						</Context.Consumer>
 					</ul>
 				</div>
 			</nav>
