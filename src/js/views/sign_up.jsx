@@ -122,8 +122,8 @@ export class SignUp extends React.Component {
 												"phone",
 												store.user.phone
 											);
-											this.props.history.push("/");
-											console.log(localStorage.phone);
+											this.props.history.push("/login");
+											//console.log(localStorage.phone);
 										}
 									}}>
 									<div className="text-center mt-3">

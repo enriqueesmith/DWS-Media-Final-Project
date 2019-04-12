@@ -9,7 +9,7 @@ export class Login extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			email: "",
+			username: "",
 			password: ""
 		};
 	}
@@ -43,11 +43,13 @@ export class Login extends React.Component {
 									id="formLife"
 									onSubmit={e => {
 										if (this.onSubmitFunction(e) === true) {
-											if (actions.logIn(this.state)) {
-												this.props.history.push(
-													"/profile"
+											actions
+												.logIn(this.state)
+												.then(a =>
+													this.props.history.push(
+														"/profile"
+													)
 												);
-											}
 										}
 									}}>
 									<div className="text-center mt-3">
@@ -67,10 +69,10 @@ export class Login extends React.Component {
 											id="emailInput"
 											aria-describedby="emailHelp"
 											placeholder={localStorage.email}
-											value={this.state.email}
+											value={this.state.username}
 											onChange={e =>
 												this.setState({
-													email: e.target.value
+													username: e.target.value
 												})
 											}
 										/>

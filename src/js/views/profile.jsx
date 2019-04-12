@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
 import ls from "local-storage";
-import { PaymentHistoryCard } from "../component/paymentHistory.jsx";
 import { PaidHistoryFunction } from "../component/paidHistoryFunction.jsx";
 import { ProfileInformation } from "../component/profileInformation.jsx";
 import { LocalFirstName } from "../component/localStorage_first_name.jsx";

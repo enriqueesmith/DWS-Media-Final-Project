@@ -17,9 +17,7 @@ const Store = PassedComponent => {
 		}
 
 		componentDidMount() {
-			// this function is the equivalent to "window.onLoad"
-			// it only run once on the entire application lifetime
-			// you should do your ajax requests here
+			this.state.actions.getDatData();
 		}
 
 		render() {
