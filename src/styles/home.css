@@ -215,10 +215,7 @@ img{
 }
 
 .carousel .thumbs-wrapper {
-    margin-left: 5px;
-    margin-top: 20px;
-    margin-right: 0;
-    margin-bottom: 0;
+    margin: 20px 0px 0px 5px !important;
     width: 100%;
 }
 
