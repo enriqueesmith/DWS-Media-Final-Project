@@ -21,7 +21,7 @@ export class Addons extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					var addon = store.addons.find(item => {
+					var addon = store.products.find(item => {
 						return (
 							item.id == parseInt(this.props.match.params.theid)
 						);
