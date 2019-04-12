@@ -109,8 +109,9 @@ export class Home extends React.Component {
 					</div>
 				</div>
 				<hr className="lineBreaks" />
-				<div className="Testimonials" />
-				<CarouselHome />
+				<div className="Testimonials">
+					<CarouselHome />
+				</div>
 			</div>
 		);
 	}

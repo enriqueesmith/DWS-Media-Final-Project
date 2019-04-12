@@ -91,29 +91,14 @@
     margin-top: 80px;
 }
 
-.carousel img{
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-}
+
 
 .aboutUsImage img{
     filter: blur(2px);
     -webkit-filter: blur(2px);
 }
 
-.carousel-caption{
-    top: 50%;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.01); /* Black w/opacity/see-through */
-    color: white;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 80%;
-    padding: 20px;
-    text-align: center;
-}
+
 
 img{
     max-width: 100%;
@@ -202,5 +187,40 @@ img{
 @media (min-width: 576px) and (max-width: 1025px){
     .card-deck {
         flex-flow: column;
+    }
+}
+
+.carousel .slide .legend {
+    background: none !important;
+    opacity: 1 !important;
+    top: 20%;
+}
+
+.CarouselContent{
+    font-style: italic;
+}
+.carousel .slide img{
+  filter: blur(1.5px);
+  -webkit-filter: blur(1.5px);
+}
+
+@media (min-width: 576px) and (max-width: 799.98px){
+    #legend {
+        font-size: 30px ;
+        top: 25%
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1025px){
+    #legend {
+        font-size: 35px ;
+        top: 25%
+    }
+}
+
+@media (min-width: 1026px) {
+    #legend {
+        font-size: 40px;
+        top:30%;
     }
 }

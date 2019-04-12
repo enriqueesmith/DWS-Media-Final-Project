@@ -29,7 +29,7 @@ export class Packages extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					var packs = store.packages.find(item => {
+					var packs = store.products.find(item => {
 						return (
 							item.id == parseInt(this.props.match.params.theid)
 						);
