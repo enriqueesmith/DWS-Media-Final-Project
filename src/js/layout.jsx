@@ -12,7 +12,7 @@ import { ShoppingCart } from "./views/shopping_cart.jsx";
 import { Checkout } from "./views/checkout.jsx";
 import Store from "./store/appContext.jsx";
 
-import { Navbar } from "./component/navbar.jsx";
+import { NavbarComponent } from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
 
 import { Portfolio } from "./views/portfolio.jsx";
@@ -27,7 +27,7 @@ export class Layout extends React.Component {
 				<div className="d-flex flex-column">
 					<BrowserRouter>
 						<ScrollToTop>
-							<Navbar />
+							<NavbarComponent />
 							<Switch>
 								<Route exact path="/" component={Home} />
 								<Route

@@ -28,7 +28,7 @@ const getState = ({ getStore, setStore }) => {
 			addUser: e => {
 				let newUser = getStore();
 				newUser.user = e;
-				//console.log(newUser.user);
+				console.log(newUser.user);
 				setStore({ newUser });
 
 				fetch(
@@ -81,7 +81,7 @@ const getState = ({ getStore, setStore }) => {
 					"payment_history",
 					JSON.stringify(currentCart.cart)
 				);
-				//console.log(localStorage.payment_history);
+				console.log(localStorage.payment_history);
 				currentCart.cart.splice(0, currentCart.cart.length);
 				setStore({ currentCart });
 			},
@@ -104,6 +104,17 @@ const getState = ({ getStore, setStore }) => {
 
 					.catch(error => console.error("Error:", error));
 			}
+			//this comes before clearing the cart so that payment history can be updated.
+			// populatePaymentHistory: e => {
+			// 	var i;
+			// 	let paymentHistoryArray = [];
+			// 	for (i = 0; i <= localStorage.payment_history; i++) {
+			// 		paymentHistoryArray.push[i];
+			// 	}
+			// 	console.log(paymentHistoryArray);
+			// 	localStorage.setItem("payment_history", paymentHistoryArray);
+			// 	return paymentHistoryArray;
+			// }
 		}
 	};
 };
