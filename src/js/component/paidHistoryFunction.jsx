@@ -7,7 +7,7 @@ import { PaymentHistoryCard } from "./paymentHistory.jsx";
 export class PaidHistoryFunction extends React.Component {
 	getPaidCart = e => {
 		let x = JSON.parse(localStorage.getItem("payment_history"));
-		console.log(x);
+		//console.log(x);
 		return x;
 	};
 
