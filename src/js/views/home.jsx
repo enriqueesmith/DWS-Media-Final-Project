@@ -55,18 +55,22 @@ export class Home extends React.Component {
 				<div className="card-deck packagesCards mt-4">
 					<Context.Consumer>
 						{({ store }) => {
-							return store.packages.map((elem, index) => {
-								return (
-									<PackagesCard
-										name={elem.name}
-										price={elem.price}
-										image={elem.image}
-										key={index}
-										camel={index}
-										elem={elem}
-									/>
-								);
-							});
+							return store.products
+								.filter(elem => {
+									return elem.type === "package";
+								})
+								.map((elem, index) => {
+									return (
+										<PackagesCard
+											name={elem.name}
+											price={elem.price}
+											image={elem.image}
+											key={index}
+											camel={index}
+											elem={elem}
+										/>
+									);
+								});
 						}}
 					</Context.Consumer>
 				</div>
@@ -84,18 +88,22 @@ export class Home extends React.Component {
 					<div className="card-deck addOnsCardsDeck mt-4">
 						<Context.Consumer>
 							{({ store }) => {
-								return store.addons.map((elem, index) => {
-									return (
-										<AddOnsCard
-											name={elem.name}
-											price={elem.price}
-											image={elem.image}
-											key={index}
-											camel={index}
-											elem={elem}
-										/>
-									);
-								});
+								return store.products
+									.filter(elem => {
+										return elem.type === "addon";
+									})
+									.map((elem, index) => {
+										return (
+											<AddOnsCard
+												name={elem.name}
+												price={elem.price}
+												image={elem.image}
+												key={index}
+												camel={index}
+												elem={elem}
+											/>
+										);
+									});
 							}}
 						</Context.Consumer>
 					</div>
