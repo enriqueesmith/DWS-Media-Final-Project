@@ -33,7 +33,7 @@ export class ThankYou extends React.Component {
 			"December"
 		];
 
-		let x = d.getDay() + 7;
+		let x = d.getDate() + 7;
 		return months[d.getMonth()] + " " + x;
 	}
 

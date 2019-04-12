@@ -4,6 +4,7 @@ import "../../styles/navbar.css";
 import { HashLink as Link } from "react-router-hash-link";
 import ls from "local-storage";
 import { LocalFirstName } from "./localStorage_first_name.jsx";
+import { UserIconImage } from "./userIconImage.jsx";
 import { Context } from "../store/appContext.jsx";
 
 import {
@@ -93,14 +94,10 @@ export class NavbarComponent extends React.Component {
 								</DropdownMenu>
 							</UncontrolledDropdown>
 							<NavItem className="rightHeader">
-								<Link className="nav-link pr-0" to="/profile">
-									<i className="fas fa-user-circle" />
-								</Link>
+								<UserIconImage />
 							</NavItem>
 							<NavItem className="rightHeader">
-								<Link className="nav-link mr-1" to="/signup">
-									<LocalFirstName />
-								</Link>
+								<LocalFirstName />
 							</NavItem>
 							<Context.Consumer>
 								{({ store, actions }) => {

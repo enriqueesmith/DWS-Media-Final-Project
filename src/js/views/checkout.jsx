@@ -87,7 +87,7 @@ export class Checkout extends React.Component {
 											) {
 												actions.clearCartOnPayment();
 												this.props.history.push(
-													"/profile"
+													"/thank_you"
 												);
 											}
 										}}>
