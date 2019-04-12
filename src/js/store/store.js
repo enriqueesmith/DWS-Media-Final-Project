@@ -1,4 +1,4 @@
-const getState = ({ getStore, setStore }) => {
+const getState = ({ getStore, setStore, getActions }) => {
 	return {
 		store: {
 			user: {
@@ -67,8 +67,9 @@ const getState = ({ getStore, setStore }) => {
 					})
 					.then(response => {
 						//console.log(loggedInUser.user);
-						localStorage.setItem("token", response.token);
-						setStore({ token: response.token });
+						localStorage.setItem("token", response.access_token);
+						setStore({ token: response.access_token });
+						getActions().listUser();
 						return true;
 					})
 
@@ -103,18 +104,36 @@ const getState = ({ getStore, setStore }) => {
 					})
 
 					.catch(error => console.error("Error:", error));
+			},
+			listUser: () => {
+				fetch(
+					"https://real-final-project-server-powergtd.c9users.io/user",
+					{
+						method: "GET",
+						headers: {
+							"Content-Type": "application/json",
+							Authorization: "JWT " + localStorage.token
+						}
+					}
+				)
+					.then(res => {
+						return res.json();
+					})
+					.then(response => {
+						//console.log(loggedInUser.user);
+						console.log(response);
+						let newUser = getStore();
+						newUser.user = response;
+						setStore({ newUser });
+					})
+
+					.catch(error => console.error("Error:", error));
+			},
+			logOut: () => {
+				let clearUser = getStore();
+				clearUser.user = {};
+				setStore({ clearUser });
 			}
-			//this comes before clearing the cart so that payment history can be updated.
-			// populatePaymentHistory: e => {
-			// 	var i;
-			// 	let paymentHistoryArray = [];
-			// 	for (i = 0; i <= localStorage.payment_history; i++) {
-			// 		paymentHistoryArray.push[i];
-			// 	}
-			// 	console.log(paymentHistoryArray);
-			// 	localStorage.setItem("payment_history", paymentHistoryArray);
-			// 	return paymentHistoryArray;
-			// }
 		}
 	};
 };

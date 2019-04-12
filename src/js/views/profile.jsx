@@ -5,6 +5,7 @@ import ls from "local-storage";
 import { PaidHistoryFunction } from "../component/paidHistoryFunction.jsx";
 import { ProfileInformation } from "../component/profileInformation.jsx";
 import { LocalFirstName } from "../component/localStorage_first_name.jsx";
+import PropTypes from "prop-types";
 
 export class Profile extends React.Component {
 	constructor() {
@@ -127,6 +128,25 @@ export class Profile extends React.Component {
 								<p style={pDetailsStyles}>
 									<ProfileInformation />
 								</p>
+								<Context.Consumer>
+									{({ store, actions }) => {
+										return (
+											<div>
+												<button
+													type="button"
+													className="btn btn-danger"
+													onClick={() => {
+														actions.logOut();
+														this.props.history.push(
+															"/login"
+														);
+													}}>
+													Log Out
+												</button>
+											</div>
+										);
+									}}
+								</Context.Consumer>
 							</div>
 						</div>
 					</div>
@@ -154,3 +174,7 @@ export class Profile extends React.Component {
 		);
 	}
 }
+Profile.propTypes = {
+	history: PropTypes.array,
+	push: PropTypes.func
+};

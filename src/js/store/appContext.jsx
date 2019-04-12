@@ -9,6 +9,7 @@ const Store = PassedComponent => {
 			super(props);
 			this.state = getState({
 				getStore: () => this.state.store,
+				getActions: () => this.state.actions,
 				setStore: updatedStore =>
 					this.setState({
 						store: Object.assign(this.state.store, updatedStore)
@@ -18,6 +19,7 @@ const Store = PassedComponent => {
 
 		componentDidMount() {
 			this.state.actions.getDatData();
+			this.state.actions.listUser();
 		}
 
 		render() {
